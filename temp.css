@@ -16,6 +16,9 @@
     src: url("./src/assets/fonts/Ubuntu-Bold.ttf");
 }
 
+body {
+    background-color: #F5F5F5;
+}
 
 
 .wrapper {
@@ -25,9 +28,56 @@
     font-family: 'Ubuntu';
     font-weight: 500;
     border-radius: 5vh;
-    padding: 5vh;
+
 }
 
+a {
+    text-decoration: none;
+}
+
+input {
+    box-sizing: content-box;
+    border: 0.1rem solid grey;
+    border-radius: 2rem;
+    padding: 1rem;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 1rem;
+    box-shadow: 0 0 1rem rgba(116, 116, 116, 0.3);
+}
+
+input[type=text] {
+    width: 20rem;
+    color: #8692A6;
+}
+
+input[type=password] {
+    width: 20rem;
+    color: #8692A6;
+}
+
+input[type=submit] {
+    width: 20rem;
+    background-color: #8692A6;
+    color: #FFFFFF;
+}
+
+input[type=button] {
+    width: 20rem;
+    background-color: #FFFFFF;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    cursor: pointer;
+}
+
+input[type=submit]:active {
+    box-shadow:none;
+}
 
 
 
@@ -37,6 +87,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 2rem;
 }
 
 /************************************************************************/
@@ -48,6 +99,8 @@
 .content {
     display: flex;
     justify-content: center;
+    background-color: #FFFFFF;
+    border-radius: 3vh;
 
 }
 
@@ -64,49 +117,11 @@
 
 /**************************** FORM **************************************/
 
-form input {
-    box-sizing: content-box;
-    border: 0.1rem solid grey;
-    border-radius: 2rem;
-    padding: 1rem;
-    font-family: 'Ubuntu';
-    font-weight: 500;
-    font-size: 1rem;
-    box-shadow: 0 0 1rem rgba(116, 116, 116, 0.2);
-}
 
-form input[type=text] {
-    width: 20rem;
+
+label {
     color: #8692A6;
 }
-
-form input[type=password] {
-    width: 20rem;
-    color: #8692A6;
-}
-
-form input[type=submit] {
-    width: 20rem;
-    background-color: #8692A6;
-    color: #FFFFFF;
-}
-
-form input[type=button] {
-    width: 20rem;
-    background-color: #FFFFFF;
-}
-
-form input[type=submit]:hover {
-    cursor: pointer;
-}
-
-form input[type=button]:hover {
-    cursor: pointer;
-}
-
- form label {
-    color: #8692A6;
- }
 
 .form-item {
     margin: 0.5rem;
@@ -135,6 +150,23 @@ form input[type=button]:hover {
 }
 
 .form-button {
+
+}
+
+.button-nav-back {
+    color: #8692A6;
+    font-size: 1rem;
+    font-weight: 500;
+
+}
+
+.button-nav-back::before {
+    content: '<';
+    margin-right: 1rem;
+}
+
+.form-submit {
+    margin-top: 2rem;
 
 }
 
