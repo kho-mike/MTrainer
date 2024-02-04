@@ -35,7 +35,8 @@ a {
     text-decoration: none;
 }
 
-input {
+input:not([type=checkbox]) {
+    min-width: 10rem;
     box-sizing: content-box;
     border: 0.1rem solid grey;
     border-radius: 2rem;
@@ -47,23 +48,19 @@ input {
 }
 
 input[type=text] {
-    width: 20rem;
     color: #8692A6;
 }
 
 input[type=password] {
-    width: 20rem;
     color: #8692A6;
 }
 
 input[type=submit] {
-    width: 20rem;
     background-color: #8692A6;
     color: #FFFFFF;
 }
 
 input[type=button] {
-    width: 20rem;
     background-color: #FFFFFF;
 }
 
@@ -81,13 +78,38 @@ input[type=submit]:active {
 
 
 
+.button-nav {
+    color: #8692A6;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+}
+
+.button-nav-back::before {
+    content:url('./src/assets/icons/back.png');
+    margin-right: 5px;
+}
+
+.button-nav-exit::before {
+    content:url('./src/assets/icons/exit.png');
+    margin-right: 5px;
+}
+
+
 /****************************** HEADER ***********************************/
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 2rem;
+    height: 5rem;
+}
+
+
+
+.userBar-menu {
+    display: flex;
+    align-items: center;
 }
 
 /************************************************************************/
@@ -123,6 +145,10 @@ label {
     color: #8692A6;
 }
 
+form input:not([type=checkbox]) {
+    width: 20rem;
+}
+
 .form-item {
     margin: 0.5rem;
 }
@@ -149,21 +175,12 @@ label {
     display: flex;
 }
 
+
+
 .form-button {
 
 }
 
-.button-nav-back {
-    color: #8692A6;
-    font-size: 1rem;
-    font-weight: 500;
-
-}
-
-.button-nav-back::before {
-    content: '<';
-    margin-right: 1rem;
-}
 
 .form-submit {
     margin-top: 2rem;
