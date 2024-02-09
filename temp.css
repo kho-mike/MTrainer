@@ -1,3 +1,8 @@
+/***************************** Main *************************/
+
+
+
+
 @font-face {
     font-weight: 300;
     font-family: 'Ubuntu';
@@ -98,6 +103,9 @@ input[type=submit]:active {
 }
 
 
+/************************************************************************/
+
+
 /****************************** HEADER ***********************************/
 
 .header {
@@ -105,6 +113,10 @@ input[type=submit]:active {
     justify-content: space-between;
     align-items: center;
     height: 5rem;
+}
+
+.header input[type=button] {
+    background-color: #8692A6;
 }
 
 .siteBar:hover {
@@ -129,17 +141,37 @@ input[type=submit]:active {
     }
 }
 
+.img-avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.userBar-btn-avatar {
+    margin: 0 1rem;
+}
+
+.avatar-box {
+
+}
+
 .userBar-btn {
     min-width: 10rem;
     box-sizing: content-box;
-
+    color: #696F79;
     border-radius: 2rem;
     padding: 1rem;
     font-family: 'Ubuntu';
     font-weight: 500;
     font-size: 1rem;
     display: flex;
-    justify-content: end
+    justify-content: end;
+    align-items: center;
+    cursor: pointer;
+}
+
+.site-logo {
+    color: #696F79;
 }
 
 .button-toMain {
