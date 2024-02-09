@@ -79,10 +79,12 @@ input[type=submit]:active {
 
 
 .button-nav {
+    padding: 0 1rem;
     color: #8692A6;
     font-size: 1rem;
     font-weight: 500;
     display: flex;
+    cursor: pointer;
 }
 
 .button-nav-back::before {
@@ -105,12 +107,60 @@ input[type=submit]:active {
     height: 5rem;
 }
 
+.siteBar:hover {
 
+    .site-logo {
+        display: none;
+    }
+
+    .button-toMain {
+        display: flex;
+    }
+}
+
+.userBar:hover {
+    
+    .userBar-btn {
+        display: none;
+    }
+
+    .userBar-menu {
+        display: flex;
+    }
+}
+
+.userBar-btn {
+    min-width: 10rem;
+    box-sizing: content-box;
+
+    border-radius: 2rem;
+    padding: 1rem;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 1rem;
+    display: flex;
+    justify-content: end
+}
+
+.button-toMain {
+    display: none;
+}
 
 .userBar-menu {
-    display: flex;
+    display: none;
+    justify-content: space-between;
     align-items: center;
+    min-width: 10rem;
+    box-sizing: content-box;
 }
+
+
+
+
+
+
+
+
 
 /************************************************************************/
 
