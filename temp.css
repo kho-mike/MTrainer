@@ -29,7 +29,7 @@ body {
 .wrapper {
 
     min-height: 90vh;
-    margin: 0 5vw;
+    margin: 0 10vw;
     font-family: 'Ubuntu';
     font-weight: 500;
     border-radius: 5vh;
@@ -141,7 +141,7 @@ input[type=submit]:active {
     }
 }
 
-.img-avatar {
+.img-avatar--small {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
@@ -207,13 +207,61 @@ input[type=submit]:active {
     border-radius: 3vh;
 
 }
+/***********************************************************************/
 
+/***************************** LOGIN ***********************************/
 .login {
 
     min-height: 80vh;
     display: flex;
     align-items: center;
 }
+/************************************************************************/
+
+/******************************* PROFILE ********************************/
+
+.profile {
+    min-height: 80vh;
+    width: 100%;
+    margin: 1rem;
+}
+
+
+/*profile-header*/
+.profile-header {
+    display: flex;
+    color: #696F79;
+}
+
+
+.img-avatar--medium {
+    border-radius: 20%;
+}
+
+.profile-header-info {
+    margin-left: 1rem;
+    width: 100%;
+}
+
+.info-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.info-description {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.info-statistic {
+    display: flex;
+}
+
+.info-statistic-item {
+    display: flex;
+}
+
+
 /************************************************************************/
 
 
