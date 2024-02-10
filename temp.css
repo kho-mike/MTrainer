@@ -261,6 +261,15 @@ input[type=submit]:active {
     display: flex;
 }
 
+.info-statistic-icon {
+    border-radius: 20%;
+    background-color: #FFFFFF;
+    padding: 0.3rem;
+    margin-right: 0.5rem;
+    box-shadow: 0 0 1rem rgba(116, 116, 116, 0.3);
+}
+
+
 
 /************************************************************************/
 
