@@ -224,13 +224,14 @@ input[type=submit]:active {
     min-height: 80vh;
     width: 100%;
     margin: 1rem;
+    color: #696F79;
 }
 
 
 /*profile-header*/
 .profile-header {
     display: flex;
-    color: #696F79;
+    margin-bottom: 3rem;
 }
 
 
@@ -257,8 +258,14 @@ input[type=submit]:active {
     display: flex;
 }
 
+.info-separator {
+    height: 1.5rem;
+}
+
 .info-statistic-item {
     display: flex;
+    width: 10rem;
+    margin-left: 1rem;
 }
 
 .info-statistic-icon {
@@ -268,6 +275,54 @@ input[type=submit]:active {
     margin-right: 0.5rem;
     box-shadow: 0 0 1rem rgba(116, 116, 116, 0.3);
 }
+
+.statistic-box__value {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.statistic-box__title {
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+/* Profile-content */
+
+.profile-content {
+    display: flex;
+}
+
+.list-awards-box {
+    width: 10rem;
+    border-radius: 10%;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 1rem rgba(116, 116, 116, 0.3);
+
+}
+
+.list-awards-title {
+    text-align: center;
+}
+
+.list-categories-box {
+    width: 70%;
+}
+
+/* List awards */
+
+.list-awards {
+    text-align: center;
+}
+
+.profile-content ul {
+    padding-inline-start: 0;
+}
+
+.profile-content li {
+    list-style-type: none;
+}
+
+/* List categories */
 
 
 
