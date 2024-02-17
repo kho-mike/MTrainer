@@ -207,6 +207,75 @@ input[type=submit]:active {
     border-radius: 3vh;
 
 }
+
+.content-other {
+    min-height: 80vh;
+    width: 100%;
+    margin: 1rem;
+    color: #696F79;
+}
+
+.content-other__header {
+
+}
+
+.other-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.other-description {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+
+/* List categories */
+
+.list-categories-box {
+
+}
+
+.list-cateegories {
+    text-align: center;
+}
+
+.list-categories-box ul {
+    padding-inline-start: 0;
+}
+
+ul.list-categories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.list-categories-box li {
+    list-style-type: none;
+    color: #F5F5F5;
+}
+
+.list-categories-box a {
+    color: #F5F5F5;
+}
+
+.list-categories__rank {
+    position: relative;
+    top: 15%;
+    left: 5%;
+}
+
+.list-categories__title {
+    position: relative;
+    bottom: 15%;
+    left: 5%;
+}
+
+
+
+
+
 /***********************************************************************/
 
 /***************************** LOGIN ***********************************/
@@ -302,10 +371,6 @@ input[type=submit]:active {
 
 .list-awards-title {
     text-align: center;
-}
-
-.list-categories-box {
-    width: 70%;
 }
 
 /* List awards */
