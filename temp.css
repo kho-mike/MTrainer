@@ -40,7 +40,7 @@ a {
     text-decoration: none;
 }
 
-input:not([type=checkbox]) {
+.btn, input:not([type=checkbox]) {
     min-width: 10rem;
     box-sizing: content-box;
     border: 0.1rem solid grey;
@@ -50,6 +50,11 @@ input:not([type=checkbox]) {
     font-weight: 500;
     font-size: 1rem;
     box-shadow: 0 0 1rem rgba(116, 116, 116, 0.3);
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 0 0 1rem rgba(116, 116, 116, 0.5);
 }
 
 input[type=text] {
@@ -390,6 +395,113 @@ ul.list-categories {
 /* List categories */
 
 
+
+/************************************************************************/
+
+
+
+
+
+
+/**************************** EXERCISE **********************************/
+
+.exercise {
+    width: 100%;
+    padding: 1rem;
+    color: #696F79;
+}
+
+.exercise-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.exercise-header__left, .exercise-header__right {
+    width: 33%;
+}
+
+.exercise-header__right {
+    text-align: end;
+}
+
+.exercise-title__name {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+
+.exercise-statistic {
+    font-size: 0.8rem;
+}
+
+.exercise-statistic__item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.exercise-statistic__title {
+    margin-right: 1rem;
+}
+
+.exercise-timer {
+    display: flex;
+    justify-content: end;
+}
+
+
+
+/* exercise-title
+exercise-title__name
+exercise-title__description
+exercise-header__center
+exercise-statistic
+exercise-statistic__item
+exercise-statistic__title
+exercise-statistic__value
+exercise-statistic__item
+exercise-statistic__title
+exercise-statistic__value
+exercise-statistic__item
+exercise-statistic__title
+exercise-statistic__value
+exercise-header__right
+exercise-timer
+exercise-timer__title
+exercise-timer__value */
+
+
+.exercise-content {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.exercise-content input, .exercise-content .btn {
+    border: 0;
+}
+
+.exercise-content__task, .exercise-content__answer, .exercise-content__btn {
+    text-align: center;
+}
+
+.exercise-content__task {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.answer--low-level, .answer--hight-level, .answer--hight-level__control {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.choose-item {
+    margin: 1rem;
+}
+
+.choose-item {
+}
 
 /************************************************************************/
 
