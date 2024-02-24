@@ -247,13 +247,13 @@ input[type=submit]:active {
 
 ul.list-categories {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .list-categories-box li {
     list-style-type: none;
     color: #F5F5F5;
+    width: 33%;
 }
 
 .list-categories-box a {
