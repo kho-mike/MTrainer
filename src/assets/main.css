@@ -1,35 +1,121 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+@font-face {
+    font-weight: 300;
+    font-family: "Ubuntu";
+    src: url("./src/assets/fonts/Ubuntu-Light.ttf");
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+@font-face {
+    font-weight: 500;
+    font-family: "Ubuntu";
+    src: url("./src/assets/fonts/Ubuntu-Medium.ttf");
+}
+
+@font-face {
+    font-weight: 700;
+    font-family: "Ubuntu";
+    src: url("./src/assets/fonts/Ubuntu-Bold.ttf");
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.wrapper {
+    min-height: 90vh;
+    margin: 0 10vw;
+    font-family: "Ubuntu";
+    font-weight: 500;
+    border-radius: 5vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    border: 0.1px solid grey;
+    border-radius: 2rem;
+}
+
+input:not([type="checkbox"]) {
+    box-sizing: content-box;
+    border: 0.1rem solid grey;
+    border-radius: 2rem;
+    padding: 1rem;
+    font-family: "Ubuntu";
+    font-weight: 500;
+    font-size: 1rem;
+    box-shadow: 0 0 1rem rgba(116, 116, 116, 0.3);
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 0 0 1rem rgba(116, 116, 116, 0.5);
+}
+
+input[type="text"] {
+    color: #8692a6;
+}
+
+input[type="password"] {
+    color: #8692a6;
+}
+
+input[type="submit"] {
+    background-color: #8692a6;
+    color: #ffffff;
+}
+
+input[type="button"] {
+    background-color: #ffffff;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    cursor: pointer;
+}
+
+input[type="submit"]:active {
+    box-shadow: none;
+}
+
+.button-nav {
+    padding: 0 1rem;
+    color: #8692a6;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    cursor: pointer;
+}
+
+.button-nav-back::before {
+    content: url("./src/assets/icons/back.png");
+    margin-right: 5px;
+}
+
+.button-nav-exit::before {
+    content: url("./src/assets/icons/exit.png");
+    margin-right: 5px;
 }
 
 @media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+    a:hover {
+        background-color: hsla(160, 100%, 37%, 0.2);
+    }
 }
 
 @media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+    body {
+        display: flex;
+        place-items: center;
+    }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+    #app {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 2rem;
+    }
 }
