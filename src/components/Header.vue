@@ -1,28 +1,19 @@
 <script setup>
-import WelcomeItem from "./WelcomeItem.vue";
-import DocumentationIcon from "./icons/IconDocumentation.vue";
-import ToolingIcon from "./icons/IconTooling.vue";
-import EcosystemIcon from "./icons/IconEcosystem.vue";
-import CommunityIcon from "./icons/IconCommunity.vue";
-import SupportIcon from "./icons/IconSupport.vue";
+import Button from "./buttons/Button.vue";
 </script>
 
 <template>
     <div class="header">
         <div class="hader-start">
             <div class="siteBar">
-                <div class="site-logo header-item">
+                <!-- <div class="site-logo header-item">
                     <h2>MTrainer</h2>
-                </div>
-                <div class="btn button-toMain header-item">
-                    <a href="#">
-                        <div class="btn">На главную</div>
-                    </a>
-                </div>
+                </div> -->
+                <Button label="To Main" link="#" />
             </div>
         </div>
         <div class="header-end">
-            <div class="userBar">
+            <!-- <div class="userBar">
                 <div class="userBar-btn header-item">
                     <div class="userBar-btn-avatar">
                         <div class="avatar-box">
@@ -46,7 +37,7 @@ import SupportIcon from "./icons/IconSupport.vue";
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
