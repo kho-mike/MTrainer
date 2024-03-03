@@ -6,20 +6,23 @@ import Button from "./buttons/Button.vue";
     <div class="header">
         <div class="hader-start">
             <div class="siteBar">
-                <!-- <div class="site-logo header-item">
+                <div class="site-logo">
                     <h2>MTrainer</h2>
-                </div> -->
-                <Button label="To Main" link="#" />
+                </div>
+                <Button
+                    class="btn--small btn-toMain"
+                    label="To Main"
+                />
             </div>
         </div>
         <div class="header-end">
-            <!-- <div class="userBar">
+            <div class="userBar">
                 <div class="userBar-btn header-item">
                     <div class="userBar-btn-avatar">
                         <div class="avatar-box">
                             <img
-                                src="./src/assets/img/avatar.jpg"
-                                height="3rem;"
+                                src="../assets/img/avatar.jpg"
+                                height="50rem"
                                 class="img-avatar--small"
                                 alt="avatar"
                             />
@@ -28,16 +31,35 @@ import Button from "./buttons/Button.vue";
                     <div class="userBar-btn-title">Хозяинов Михаил</div>
                 </div>
                 <div class="userBar-menu header-item">
-                    <a href="http://localhost:5500/temp-login.html">
-                        <div class="button-nav button-nav-exit">Выйти</div>
-                    </a>
-                    <div class="btn">
-                        <a href="#">
-                            <div class="btn">Статистика</div>
-                        </a>
-                    </div>
+                    <Button>Вёрстка</Button>
+                    <Button>Статистика</Button>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
 </template>
+
+<style scoped>
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    height: 2rem;
+}
+
+.btn-toMain {
+    display: none;
+}
+
+.siteBar:hover {
+    
+    .site-logo {
+        display: none;
+    }
+
+    .btn-toMain {
+        display: flex;
+    }
+}
+</style>

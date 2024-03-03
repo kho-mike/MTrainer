@@ -7,6 +7,8 @@ import Content from "./components/Content.vue";
 
   <Header />
 
+  <Content />
+
 
 </template>
 

@@ -16,112 +16,38 @@
     src: url("./src/assets/fonts/Ubuntu-Bold.ttf");
 }
 
+:root {
+    --color-bg--dark: #F5F5F5;
+    --color-bg--ligth: #FFFFFF;
+
+    --color-btn--grey: #8692A6;
+    --color-btn--white: #FFFFFF;
+    --color-btn--red: #ED3B2F;
+    --color-btn--orange: #F89439;
+    --color-btn--green: #51BE69;
+
+    --color-text--dark: #696F79;
+    --color-text--ligth: #FFFFFF;
+    --color-text--red: #DE6944;
+
+}
+
 body {
-    background-color: #000000;
+    margin: 0;
+    padding: 0
 }
 
 .wrapper {
-    min-height: 90vh;
-    margin: 0 10vw;
-    font-family: "Ubuntu";
-    font-weight: 500;
-    border-radius: 5vh;
+    background-color: var(--color-bg--dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;;
+    padding: 0 10vw;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
 }
 
-.btn {
-    border: 0.1rem solid grey;
-    border-radius: 2rem;
-    padding: 1rem;
-    font-family: "Ubuntu";
-    font-weight: 500;
-    font-size: 1rem;
-    box-shadow: 0 0 1rem rgba(116, 116, 116, 0.3);
-    cursor: pointer;
-}
-
-input:not([type="checkbox"]) {
-    box-sizing: content-box;
-    border: 0.1rem solid grey;
-    border-radius: 2rem;
-    padding: 1rem;
-    font-family: "Ubuntu";
-    font-weight: 500;
-    font-size: 1rem;
-
-    cursor: pointer;
-}
-
-.btn:hover {
-    box-shadow: 0 0 1rem rgba(116, 116, 116, 0.5);
-}
-
-input[type="text"] {
-    color: #8692a6;
-}
-
-input[type="password"] {
-    color: #8692a6;
-}
-
-input[type="submit"] {
-    background-color: #8692a6;
-    color: #ffffff;
-}
-
-input[type="button"] {
-    background-color: #ffffff;
-}
-
-input[type="submit"]:hover {
-    cursor: pointer;
-}
-
-input[type="button"]:hover {
-    cursor: pointer;
-}
-
-input[type="submit"]:active {
-    box-shadow: none;
-}
-
-.button-nav {
-    padding: 0 1rem;
-    color: #8692a6;
-    font-size: 1rem;
-    font-weight: 500;
-    display: flex;
-    cursor: pointer;
-}
-
-.button-nav-back::before {
-    content: url("./src/assets/icons/back.png");
-    margin-right: 5px;
-}
-
-.button-nav-exit::before {
-    content: url("./src/assets/icons/exit.png");
-    margin-right: 5px;
-}
-
-@media (hover: hover) {
-    a:hover {
-        background-color: hsla(160, 100%, 37%, 0.2);
-    }
-}
-
-@media (min-width: 1024px) {
-    body {
-        display: flex;
-        place-items: center;
-    }
-
-    #app {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 0 2rem;
-    }
-}
