@@ -1,5 +1,6 @@
 <script setup>
 import Button from "./buttons/Button.vue";
+import ButtonNav from "./buttons/ButtonNav.vue";
 </script>
 
 <template>
@@ -10,7 +11,7 @@ import Button from "./buttons/Button.vue";
                     <h2>MTrainer</h2>
                 </div>
                 <Button
-                    class="btn--small btn-toMain"
+                    class="btn--medium btn-toMain"
                     label="To Main"
                 />
             </div>
@@ -31,8 +32,8 @@ import Button from "./buttons/Button.vue";
                     <div class="userBar-btn-title">Хозяинов Михаил</div>
                 </div>
                 <div class="userBar-menu header-item">
-                    <Button>Вёрстка</Button>
-                    <Button>Статистика</Button>
+                    <ButtonNav label="Выход" />
+                    <Button class="btn--medium" label="Настройки" />
                 </div>
             </div>
         </div>
@@ -59,6 +60,27 @@ import Button from "./buttons/Button.vue";
     }
 
     .btn-toMain {
+        display: block;
+    }
+}
+
+
+.userBar-btn {
+    display: flex;
+    align-items: center;
+}
+
+.userBar-menu {
+    display: none;
+}
+
+.userBar:hover{
+
+    .userBar-btn {
+        display: none;
+    }
+
+    .userBar-menu {
         display: flex;
     }
 }

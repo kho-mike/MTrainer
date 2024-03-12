@@ -25,12 +25,15 @@ defineProps({
     background-color: var(--color-btn--grey);
     border-radius: 2rem;
     padding: 1rem;
-    font-family: "Ubuntu";
     font-weight: 500;
     font-size: 1rem;
     box-shadow: 0 0 1rem rgba(116, 116, 116, 0.3);
     cursor: pointer;
     text-align: center;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .btn:hover {
@@ -38,7 +41,16 @@ defineProps({
 }
 
 .btn--small {
-    width: 8rem;
+    max-width: 40px;
+}
+
+.btn--medium {
+    min-width: 150px;
+    max-width: 200px;
+}
+
+.btn--big {
+    min-width: 250px;
 }
 
 @media (min-width: 1024px) {

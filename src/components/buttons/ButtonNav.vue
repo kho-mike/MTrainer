@@ -16,29 +16,44 @@ defineProps({
 </script>
 
 <template>
-    <div class="btn" :class="class">{{ label }}</div>
+    <div class="btn-nav" :class="class">{{ label }}</div>
 </template>
 
 <style scoped>
-.btn {
+.btn-nav {
     color: var(--color-text--ligth);
-    background-color: var(--color-btn--grey);
+
     border-radius: 2rem;
     padding: 1rem;
-    font-family: "Ubuntu";
     font-weight: 500;
     font-size: 1rem;
-    box-shadow: 0 0 1rem rgba(116, 116, 116, 0.3);
+
     cursor: pointer;
     text-align: center;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+
+
+
+    padding: 0 1rem;
+    color: #8692A6;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    cursor: pointer;
 }
 
-.btn:hover {
-    box-shadow: 0 0 1.2rem rgba(116, 116, 116, 0.5);
+.btn-nav-back::before {
+    content:url('./src/assets/icons/back.png');
+    margin-right: 5px;
 }
 
-.btn--small {
-    width: 8rem;
+.btn-nav-exit::before {
+    content:url('./src/assets/icons/exit.png');
+    margin-right: 5px;
 }
 
 @media (min-width: 1024px) {
