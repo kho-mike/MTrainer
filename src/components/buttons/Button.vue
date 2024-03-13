@@ -45,18 +45,12 @@ defineProps({
 }
 
 .btn--medium {
-    min-width: 150px;
-    max-width: 200px;
+    min-width: 5rem;
+    max-width: 8rem;
 }
 
 .btn--big {
     min-width: 250px;
 }
 
-@media (min-width: 1024px) {
-    .greetings h1,
-    .greetings h3 {
-        text-align: left;
-    }
-}
 </style>

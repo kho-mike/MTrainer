@@ -10,10 +10,7 @@ import ButtonNav from "./buttons/ButtonNav.vue";
                 <div class="site-logo">
                     <h2>MTrainer</h2>
                 </div>
-                <Button
-                    class="btn--medium btn-toMain"
-                    label="To Main"
-                />
+                <Button class="btn--medium btn-toMain" label="To Main" />
             </div>
         </div>
         <div class="header-end">
@@ -54,7 +51,6 @@ import ButtonNav from "./buttons/ButtonNav.vue";
 }
 
 .siteBar:hover {
-    
     .site-logo {
         display: none;
     }
@@ -63,7 +59,6 @@ import ButtonNav from "./buttons/ButtonNav.vue";
         display: block;
     }
 }
-
 
 .userBar-btn {
     display: flex;
@@ -74,14 +69,51 @@ import ButtonNav from "./buttons/ButtonNav.vue";
     display: none;
 }
 
-.userBar:hover{
+.siteBar:hover {
+    .site-logo {
+        display: none;
+    }
 
+    .btn-toMain {
+        display: block;
+    }
+}
+
+.userBar:hover {
     .userBar-btn {
         display: none;
     }
 
     .userBar-menu {
         display: flex;
+    }
+}
+
+@media (hover: none) {
+    .siteBar:active {
+        .site-logo {
+            display: none;
+        }
+
+        .btn-toMain {
+            display: block;
+        }
+    }
+
+    .userBar:active {
+        .userBar-btn {
+            display: none;
+        }
+
+        .userBar-menu {
+            display: flex;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .userBar-btn-title {
+        display: none;
     }
 }
 </style>
