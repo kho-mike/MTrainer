@@ -26,7 +26,7 @@ import ButtonNav from "./buttons/ButtonNav.vue";
                             />
                         </div>
                     </div>
-                    <div class="userBar-btn-title">Хозяинов Михаил</div>
+                    <div class="userBar-btn-title">Хозяинов Михаил...</div>
                 </div>
                 <div class="userBar-menu header-item">
                     <ButtonNav label="Выход" />
