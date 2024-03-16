@@ -29,7 +29,7 @@ import ButtonNav from "./buttons/ButtonNav.vue";
                     <div class="userBar-btn-title">Хозяинов Михаил</div>
                 </div>
                 <div class="userBar-menu header-item">
-                    <ButtonNav label="Выход" />
+                    <ButtonNav class="btn-nav-back" label="Выход" />
                     <Button class="btn--medium" label="Настройки" />
                 </div>
             </div>
@@ -44,6 +44,10 @@ import ButtonNav from "./buttons/ButtonNav.vue";
     align-items: center;
     padding: 1rem 0;
     height: 2rem;
+}
+
+.header-item * {
+    margin-left: 0.5rem;
 }
 
 .btn-toMain {
@@ -67,6 +71,7 @@ import ButtonNav from "./buttons/ButtonNav.vue";
 
 .userBar-menu {
     display: none;
+    align-items: center;
 }
 
 .siteBar:hover {

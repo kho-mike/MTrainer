@@ -21,45 +21,25 @@ defineProps({
 
 <style scoped>
 .btn-nav {
-    color: var(--color-text--ligth);
+    color: var(--color-text--dark);
 
-    border-radius: 2rem;
-    padding: 1rem;
     font-weight: 500;
     font-size: 1rem;
-
     cursor: pointer;
+    display: flex;
     text-align: center;
-
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-
-
-
-
-    padding: 0 1rem;
-    color: #8692A6;
-    font-size: 1rem;
-    font-weight: 500;
-    display: flex;
-    cursor: pointer;
 }
 
 .btn-nav-back::before {
-    content:url('./src/assets/icons/back.png');
+    content: url("../../assets/icons/back.png");
     margin-right: 5px;
 }
 
 .btn-nav-exit::before {
-    content:url('./src/assets/icons/exit.png');
+    content: url("./src/assets/icons/exit.png");
     margin-right: 5px;
-}
-
-@media (min-width: 1024px) {
-    .greetings h1,
-    .greetings h3 {
-        text-align: left;
-    }
 }
 </style>
