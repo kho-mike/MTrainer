@@ -34,6 +34,7 @@ defineProps({
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    user-select: none;
 }
 
 .btn:hover {
