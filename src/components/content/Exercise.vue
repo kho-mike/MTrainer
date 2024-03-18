@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="content">
+
         <div class="exercise">
             <div class="exercise-header">
                 <div class="exercise-header__left">
@@ -77,7 +77,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
 </template>
 
 <style scoped>
