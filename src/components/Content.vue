@@ -1,5 +1,6 @@
 <script setup>
     import Exercise from "./content/Exercise.vue";
+    import { MTrainer } from "MTrainer.js";
 </script>
 
 <template>
