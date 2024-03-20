@@ -48,6 +48,12 @@ body {
     font-family: "Ubuntu";
 }
 
+@media screen and (max-width: 400px) {
+    .wrapper {
+        padding: 0 1vw;
+    }
+}
+
 a {
     text-decoration: none;
 }
