@@ -1,5 +1,6 @@
 <script setup>
 
+
 </script>
 
 <template>
@@ -38,5 +39,53 @@
 </template>
 
 <style scoped>
+
+.exercise {
+    width: 100%;
+    padding: 1rem;
+    color: #696F79;
+}
+
+@media screen and (min-width: 651px) {
+    .exercise-header__right {
+        text-align: end;
+    }
+
+    .exercise-header__left, .exercise-header__right {
+        width: 33%;
+    }
+}
+
+.exercise-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.exercise-title__name {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+
+.exercise-statistic {
+    font-size: 0.8rem;
+}
+
+.exercise-statistic__item {
+    display: flex;
+
+}
+
+.exercise-statistic__title, .exercise-timer__title {
+    margin-right: 1rem;
+}
+
+.exercise-timer {
+    display: flex;
+    justify-content: end;
+}
 
 </style>
