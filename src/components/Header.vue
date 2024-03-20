@@ -94,6 +94,14 @@ import ButtonNav from "./buttons/ButtonNav.vue";
     }
 }
 
+
+.img-avatar--small {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+
 @media (hover: none) {
     .siteBar:active {
         .site-logo {
