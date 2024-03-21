@@ -56,9 +56,18 @@
     }
 }
 
+
+
 .exercise-header {
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 650px) {
+    .exercise-header {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
@@ -71,7 +80,7 @@
 
 
 .exercise-statistic {
-    font-size: 0.8rem;
+
 }
 
 .exercise-statistic__item {
