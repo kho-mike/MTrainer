@@ -5,6 +5,7 @@ import ExerciseContent from '@/components/content/exercise/Exercise-content.vue'
 
 <template>
     <ExerciseHeader />
+    <ExerciseContent />
 </template>
 
 <style scoped></style>

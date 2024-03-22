@@ -68,6 +68,15 @@
         display: flex;
         flex-direction: column;
     }
+    .exercise-header__left {
+        text-align: start;
+    }
+    .exercise-header__center {
+        text-align: center;
+    }
+    .exercise-header__right {
+        text-align: end;
+    }
 }
 
 

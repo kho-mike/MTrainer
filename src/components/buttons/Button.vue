@@ -35,6 +35,7 @@ defineProps({
     text-overflow: ellipsis;
     white-space: nowrap;
     user-select: none;
+
 }
 
 .btn:hover {
@@ -42,7 +43,7 @@ defineProps({
 }
 
 .btn--small {
-    max-width: 40px;
+    width: 30px;
 }
 
 .btn--medium {
