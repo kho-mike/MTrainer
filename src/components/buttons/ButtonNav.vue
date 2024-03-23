@@ -32,6 +32,8 @@ defineProps({
     text-overflow: ellipsis;
     white-space: nowrap;
     user-select: none;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .btn-nav-back::before {

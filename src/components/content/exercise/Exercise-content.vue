@@ -2,14 +2,14 @@
 import Button from "@/components/buttons/Button.vue";
 
 
-let level = 'low';
+let level = 'hight';
 </script>
 
 <template>
     <div class="exercise-content">
         <div class="exercise-content__task">2 x 2 = ?</div>
         <div class="exercise-content__answer">
-            <div class="answer--low-level">
+            <div v-if="level === 'low'" class="answer--low-level">
                 <Button class="btn--small" label="2"/>
                 <Button class="btn--small" label="2"/>
                 <Button class="btn--small" label="2"/>
@@ -17,7 +17,7 @@ let level = 'low';
             </div>
             <div v-if="level === 'hight'" class="answer--hight-level">
                 <div class="answer--hight-level__input">
-                    <input type="number" placeholder="Ответ" autofocus />
+                    <input type="number" placeholder="..." autofocus />
                 </div>
             </div>
         </div>
@@ -90,6 +90,20 @@ let level = 'low';
 
 .exercise-content__btn input {
     background-color: #51be69;
+}
+
+
+input:not([type=checkbox]) {
+
+box-sizing: content-box;
+border: 0.1rem solid grey;
+border-radius: 2rem;
+padding: 1rem;
+font-family: 'Ubuntu';
+font-weight: 500;
+font-size: 1rem;
+box-shadow: 0 0 1rem rgba(116, 116, 116, 0.3);
+cursor: pointer;
 }
 
 @media screen and (max-width: 650px) {
