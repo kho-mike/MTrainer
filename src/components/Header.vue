@@ -43,7 +43,7 @@ import ButtonNav from "./buttons/ButtonNav.vue";
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
-    height: 5rem;
+    height: 2rem;
 }
 
 .header-item * {
