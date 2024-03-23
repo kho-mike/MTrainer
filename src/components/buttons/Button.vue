@@ -31,11 +31,9 @@ defineProps({
     cursor: pointer;
     text-align: center;
 
-    --webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     user-select: none;
 
 }
