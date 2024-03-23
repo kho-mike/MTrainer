@@ -32,8 +32,9 @@ let level = 'hight';
     min-height: 60vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items:center;
+    padding-top: 2rem;
 }
 
 .exercise-content input,
