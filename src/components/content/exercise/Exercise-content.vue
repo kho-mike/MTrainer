@@ -1,5 +1,6 @@
 <script setup>
 import Button from "@/components/buttons/Button.vue";
+import ButtonTest from "@/components/buttons/ButtonTest.vue";
 
 let level = 'low';
 </script>
@@ -9,10 +10,7 @@ let level = 'low';
         <div class="exercise-content__task">2 x 2 = ?</div>
         <div class="exercise-content__answer">
             <div class="answer--low-level">
-                <Button class="btn--small" label="2" />
-                <Button class="btn--small" label="4" />
-                <Button class="btn--small" label="6" />
-                <Button class="btn--small" label="8" />
+                <ButtonTest label="2"/>
             </div>
             <div v-if="level === 'hight'" class="answer--hight-level">
                 <div class="answer--hight-level__input">
