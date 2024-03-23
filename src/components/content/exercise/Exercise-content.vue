@@ -79,8 +79,7 @@ let level = 'hight';
 }
 
 .answer--hight-level {
-    padding: 1rem;
-    margin: 1rem;
+    margin: 0 5px;
 }
 
 .answer--hight-level input {
