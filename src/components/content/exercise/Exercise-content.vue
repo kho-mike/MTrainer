@@ -3,9 +3,11 @@ import Button from "@/components/buttons/Button.vue";
 
 
 
-let level = 'hight';
+let level = 'low';
 import { MTrainer } from "@/MTrainer.js";
-//console.log(MTrainer);
+
+
+
 </script>
 
 <template>
@@ -25,7 +27,7 @@ import { MTrainer } from "@/MTrainer.js";
             </div>
         </div>
         <div class="exercise-content__btn">
-            <Button class="btn--medium" label="Ответить" link="#"/>
+            <Button @click="checkAnswer" class="btn--medium" label="Ответить" link="#"/>
         </div>
     </div>
 </template>
