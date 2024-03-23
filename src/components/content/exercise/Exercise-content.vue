@@ -2,7 +2,10 @@
 import Button from "@/components/buttons/Button.vue";
 
 
+
 let level = 'hight';
+import { MTrainer } from "@/MTrainer.js";
+//console.log(MTrainer);
 </script>
 
 <template>
@@ -10,10 +13,10 @@ let level = 'hight';
         <div class="exercise-content__task">2 x 2 = ?</div>
         <div class="exercise-content__answer">
             <div v-if="level === 'low'" class="answer--low-level">
-                <Button class="btn--small" label="2"/>
-                <Button class="btn--small" label="2"/>
-                <Button class="btn--small" label="2"/>
-                <Button class="btn--small" label="2"/>
+                <Button class="btn--small" label="2" link="#"/>
+                <Button class="btn--small" label="2" link="#"/>
+                <Button class="btn--small" label="2" link="#"/>
+                <Button class="btn--small" label="2" link="#"/>
             </div>
             <div v-if="level === 'hight'" class="answer--hight-level">
                 <div class="answer--hight-level__input">
@@ -22,7 +25,7 @@ let level = 'hight';
             </div>
         </div>
         <div class="exercise-content__btn">
-            <Button class="btn--medium" label="Ответить" />
+            <Button class="btn--medium" label="Ответить" link="#"/>
         </div>
     </div>
 </template>

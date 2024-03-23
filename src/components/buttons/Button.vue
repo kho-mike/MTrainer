@@ -16,7 +16,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="btn" :class="class">{{ label }}</div>
+    <div class="btn" :class="class" :link="link">{{ label }}</div>
 </template>
 
 <style scoped>
@@ -35,6 +35,7 @@ defineProps({
 
     overflow: hidden;
     user-select: none;
+    -webkit-user-select: none;
 
 }
 

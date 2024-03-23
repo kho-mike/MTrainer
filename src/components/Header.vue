@@ -10,7 +10,7 @@ import ButtonNav from "./buttons/ButtonNav.vue";
                 <div class="site-logo">
                     <h2>MTrainer</h2>
                 </div>
-                <Button class="btn--medium btn-toMain" label="To Main" />
+                <Button class="btn--medium btn-toMain" label="To Main" link="#"/>
             </div>
         </div>
         <div class="header-end">
@@ -29,8 +29,8 @@ import ButtonNav from "./buttons/ButtonNav.vue";
                     <div class="userBar-btn-title">Хозяинов Михаил</div>
                 </div>
                 <div class="userBar-menu header-item">
-                    <ButtonNav class="btn-nav-back" label="Выход" />
-                    <Button class="btn--medium" label="Настройки" />
+                    <ButtonNav class="btn-nav-back" label="Выход" link="#" />
+                    <Button class="btn--medium" label="Настройки" link="#"/>
                 </div>
             </div>
         </div>
