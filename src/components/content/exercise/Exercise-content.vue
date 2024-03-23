@@ -1,13 +1,8 @@
 <script setup>
+import { MTrainer } from "@/MTrainer.js";
 import Button from "@/components/buttons/Button.vue";
 
-
-
-let level = 'low';
-import { MTrainer } from "@/MTrainer.js";
-
-
-
+let level = "low";
 </script>
 
 <template>
@@ -15,10 +10,10 @@ import { MTrainer } from "@/MTrainer.js";
         <div class="exercise-content__task">2 x 2 = ?</div>
         <div class="exercise-content__answer">
             <div v-if="level === 'low'" class="answer--low-level">
-                <Button class="btn--small" label="2" link="#"/>
-                <Button class="btn--small" label="2" link="#"/>
-                <Button class="btn--small" label="2" link="#"/>
-                <Button class="btn--small" label="2" link="#"/>
+                <Button class="btn--small" label="2" link="#" />
+                <Button class="btn--small" label="2" link="#" />
+                <Button class="btn--small" label="2" link="#" />
+                <Button class="btn--small" label="2" link="#" />
             </div>
             <div v-if="level === 'hight'" class="answer--hight-level">
                 <div class="answer--hight-level__input">
@@ -27,7 +22,7 @@ import { MTrainer } from "@/MTrainer.js";
             </div>
         </div>
         <div class="exercise-content__btn">
-            <Button @click="checkAnswer" class="btn--medium" label="Ответить" link="#"/>
+            <Button class="btn--medium" label="Ответить" link="#" />
         </div>
     </div>
 </template>
@@ -38,7 +33,7 @@ import { MTrainer } from "@/MTrainer.js";
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items:center;
+    align-items: center;
     padding-top: 2rem;
 }
 
@@ -97,18 +92,16 @@ import { MTrainer } from "@/MTrainer.js";
     background-color: #51be69;
 }
 
-
-input:not([type=checkbox]) {
-
-box-sizing: content-box;
-border: 0.1rem solid grey;
-border-radius: 2rem;
-padding: 1rem;
-font-family: 'Ubuntu';
-font-weight: 500;
-font-size: 1rem;
-box-shadow: 0 0 1rem rgba(116, 116, 116, 0.3);
-cursor: pointer;
+input:not([type="checkbox"]) {
+    box-sizing: content-box;
+    border: 0.1rem solid grey;
+    border-radius: 2rem;
+    padding: 1rem;
+    font-family: "Ubuntu";
+    font-weight: 500;
+    font-size: 1rem;
+    box-shadow: 0 0 1rem rgba(116, 116, 116, 0.3);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 650px) {
