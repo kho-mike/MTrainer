@@ -61,7 +61,7 @@ export const MTrainer = {
 
 /****************************************** OLD *************************************************/
 
-
+/*
 
 
 const app = {
@@ -481,3 +481,5 @@ window.addEventListener('unload', ()=>{
         DB.current = JSON.stringify(user.current);
     }
 });
+
+*/
