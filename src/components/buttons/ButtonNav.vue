@@ -16,26 +16,31 @@ defineProps({
 </script>
 
 <template>
-    <div class="btn-nav" :class="class" :link="link">{{ label }}</div>
+    <button class="btn-nav" :class="class" :link="link">{{ label }}</button>
 </template>
 
 <style scoped>
 .btn-nav {
     color: var(--color-text--dark);
+    background-color: var(--color-bg---dark);
 
+    box-sizing: border-box;
+    border: none;
+    margin: auto 5px;
+    padding: auto 1rem;
     font-weight: 500;
     font-size: 1rem;
+    text-shadow: 0 0 1rem rgba(116, 116, 116, 0.3);
+
     cursor: pointer;
     display: flex;
     text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    user-select: none;
-
-    -webkit-user-select: none;
 
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .btn-nav-back::before {

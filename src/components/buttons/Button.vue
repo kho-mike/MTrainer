@@ -16,11 +16,14 @@ defineProps({
 </script>
 
 <template>
-    <div class="btn" :class="class" :link="link">{{ label }}</div>
+    <button class="btn" :class="class" :link="link">{{ label }}</button>
 </template>
 
 <style scoped>
 .btn {
+    box-sizing: border-box;
+    border: 0;
+    margin: auto 5px;
     color: var(--color-text--ligth);
     background-color: var(--color-btn--grey);
     border-radius: 2rem;
@@ -44,16 +47,15 @@ defineProps({
 }
 
 .btn--small {
-    width: 30px;
+    width: 70px;
 }
 
 .btn--medium {
-    min-width: 5rem;
-    max-width: 8rem;
+    width: 120px;
 }
 
 .btn--big {
-    min-width: 250px;
+    width: 200px;
 }
 
 </style>
