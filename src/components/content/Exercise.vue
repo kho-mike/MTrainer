@@ -103,8 +103,7 @@
     font-weight: 500;
 }
 
-.exercise-statistic {
-}
+
 
 .exercise-statistic__item {
     display: flex;
