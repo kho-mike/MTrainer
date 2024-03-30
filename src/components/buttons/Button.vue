@@ -4,10 +4,6 @@ defineProps({
         type: String,
         required: true,
     },
-    link: {
-        type: String,
-        required: true,
-    },
     class: {
         type: String,
         required: true,
@@ -16,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-    <button class="btn" :class="class" :link="link">{{ label }}</button>
+    <button class="btn" :class="class" >{{ label }}</button>
 </template>
 
 <style scoped>
@@ -44,6 +40,11 @@ defineProps({
 
 .btn:hover {
     box-shadow: 0 0 1.2rem rgba(116, 116, 116, 0.5);
+}
+
+.btn:disabled {
+    background-color: var(--color-btn--disabled);
+    cursor: no-drop;
 }
 
 .btn--small {

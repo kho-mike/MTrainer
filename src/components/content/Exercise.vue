@@ -2,27 +2,27 @@
     <div class="exercise-header">
         <div class="exercise-header__left">
             <div class="exercise-title">
-                <div class="exercise-title__name">Умножение на 2</div>
-                <div class="exercise-title__description">описание</div>
+                <div class="exercise-title__name">Умножение</div>
+                <div class="exercise-title__description">тренировка таблицы умножения</div>
             </div>
         </div>
         <div class="exercise-header__center">
             <div class="exercise-statistic">
                 <div class="exercise-statistic__item">
                     <div class="exercise-statistic__title">Всего ответов:</div>
-                    <div class="exercise-statistic__value">0</div>
+                    <div class="exercise-statistic__value">{{ stat.all }}</div>
                 </div>
                 <div class="exercise-statistic__item">
                     <div class="exercise-statistic__title">Верно:</div>
-                    <div class="exercise-statistic__value">0</div>
+                    <div class="exercise-statistic__value">{{ stat.right }}</div>
                 </div>
                 <div class="exercise-statistic__item">
                     <div class="exercise-statistic__title">Ошибок:</div>
-                    <div class="exercise-statistic__value">0</div>
+                    <div class="exercise-statistic__value">{{ stat.wrong }}</div>
                 </div>
             </div>
         </div>
-        <div class="exercise-header__right">
+        <div v-if="false" class="exercise-header__right">
             <div class="exercise-timer">
                 <div class="exercise-timer__title">Таймер:</div>
                 <div class="exercise-timer__value">00:00:00</div>
@@ -30,29 +30,111 @@
         </div>
     </div>
     <div class="exercise-content">
-        <div class="exercise-content__task">2 x 2 = ?</div>
+        <div class="exercise-content__task">
+            <span class="task__item">{{ currentTask.firstOperand }}</span>
+            <span class="task__item">x</span>
+            <span class="task__item">{{ currentTask.secondOperand }}</span>
+            <span class="task__item">=</span>
+            <span class="task__item">{{ currentTask.result }}</span>
+        </div>
         <div class="exercise-content__answer">
-            <div v-if="level === 'low'" class="answer--low-level">
-                <Button class="btn--small" label="2" link="#" />
-                <Button class="btn--small" label="2" link="#" />
-                <Button class="btn--small" label="2" link="#" />
-                <Button class="btn--small" label="2" link="#" />
+            <div v-if="currentTask.level === 'low'" class="answer--low-level">
+                <Button 
+                    v-for="variant in currentTask.variants"
+                    @click="(event)=>chooseAnswer(event)" 
+                    class="btn--small" 
+                    :id="variant" 
+                    :label="String(variant)"
+                />
             </div>
-            <div v-if="level === 'hight'" class="answer--hight-level">
+            <div v-if="currentTask.level === 'hight'" class="answer--hight-level">
                 <div class="answer--hight-level__input">
                     <input type="number" placeholder="..." autofocus />
                 </div>
             </div>
         </div>
         <div class="exercise-content__btn">
-            <Button class="btn--medium" label="Ответить" link="#" />
+            <Button :disabled="currentTask.result==='?'" @click="checkAnswer" class="btn--medium" label="Ответить" link="#" />
+        </div>
+        <div  class="msg-box">
+            <Msg v-for="msg in messages" class="" :text="msg"/>
+
         </div>
     </div>
 </template>
 
 <script setup>
     import Button from "@/components/buttons/Button.vue";
+    import Msg from "@/components/Msg.vue";
+    import { Answers, Exercises, Operators } from "@/MTrainer";
     import { reactive, ref } from 'vue'
+        
+    const currentTask = reactive(
+        {
+            firstOperand: 2,
+            operator: Operators.multiplication.icon,
+            secondOperand: 2,
+            result: '?',
+            level: 'low',
+            variants: [
+                3, 7, 5, 6
+            ],
+        }
+    )
+
+    const messages = reactive({});
+
+    const stat = reactive ({
+        all: 0,
+        right: 0,
+        wrong: 0
+    })
+
+    function generateTask() {
+        currentTask.firstOperand = Math.round(Math.random() * (9 - 2) + 2);
+        currentTask.secondOperand = Math.round(Math.random() * (9 - 2) + 2);
+        currentTask.result = '?';
+        let arr = [];
+        arr.push(Answers.multiplication[currentTask.firstOperand][currentTask.secondOperand]-1);
+        arr.push(Answers.multiplication[currentTask.firstOperand][currentTask.secondOperand]);
+        arr.push(Answers.multiplication[currentTask.firstOperand][currentTask.secondOperand]+1);
+        currentTask.variants = arr.map(value => ({ value, sort: Math.random() }))
+                                    .sort((a, b) => a.sort - b.sort)
+                                    .map(({ value }) => value)
+    }
+
+    function chooseAnswer(event){
+        currentTask.result=Number(event.target.id);
+    }
+
+    function checkAnswer(){
+        stat.all++;
+        if(
+            currentTask.result === Answers.multiplication[currentTask.firstOperand][currentTask.secondOperand]
+        ){
+            stat.right++;
+            showMsg('Верно!!!');
+            generateTask();
+        } else {
+            stat.wrong++;
+            showMsg('Ошибочка...');
+            currentTask.result = '?';
+        }
+    }
+
+    function showMsg(text) {
+        let id = Number(new Date());
+        messages[id] = text;
+
+        setTimeout(hideMsg, 3000, id);
+        console.log(messages);
+    }
+
+    function hideMsg(id) {
+        delete messages[id];
+    }
+
+    generateTask();
 
 </script>
 
@@ -61,6 +143,12 @@
     width: 100%;
     padding: 1rem;
     color: #696f79;
+}
+
+.msg-box {
+    display: flex;
+    flex-direction: column;
+
 }
 
 @media screen and (min-width: 651px) {
@@ -106,7 +194,9 @@
 
 
 .exercise-statistic__item {
+    width: 150px;
     display: flex;
+    justify-content: space-between;
 }
 
 .exercise-statistic__title,
@@ -125,7 +215,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    padding-top: 2rem;
+    padding-top: 10vh;
 }
 
 .exercise-content input,
@@ -141,8 +231,13 @@
 }
 
 .exercise-content__task {
+    display: flex;
     font-size: 4rem;
     font-weight: 500;
+}
+
+.task__item {
+    padding: 0 15px;
 }
 
 .choose-item {
