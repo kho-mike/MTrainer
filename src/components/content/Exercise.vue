@@ -3,7 +3,9 @@
         <div class="exercise-header__left">
             <div class="exercise-title">
                 <div class="exercise-title__name">Умножение</div>
-                <div class="exercise-title__description">тренировка таблицы умножения</div>
+                <div class="exercise-title__description">
+                    тренировка таблицы умножения
+                </div>
             </div>
         </div>
         <div class="exercise-header__center">
@@ -14,11 +16,21 @@
                 </div>
                 <div class="exercise-statistic__item">
                     <div class="exercise-statistic__title">Верно:</div>
-                    <div class="exercise-statistic__value">{{ stat.right }}</div>
+                    <div
+                        class="exercise-statistic__value"
+                        :style="stat.right ? 'color:var(--color--green)' : ''"
+                    >
+                        {{ stat.right }}
+                    </div>
                 </div>
                 <div class="exercise-statistic__item">
                     <div class="exercise-statistic__title">Ошибок:</div>
-                    <div class="exercise-statistic__value">{{ stat.wrong }}</div>
+                    <div
+                        class="exercise-statistic__value"
+                        :style="stat.wrong ? 'color:var(--color--red)' : ''"
+                    >
+                        {{ stat.wrong }}
+                    </div>
                 </div>
             </div>
         </div>
@@ -39,103 +51,230 @@
         </div>
         <div class="exercise-content__answer">
             <div v-if="currentTask.level === 'low'" class="answer--low-level">
-                <Button 
+                <Button
                     v-for="variant in currentTask.variants"
-                    @click="(event)=>chooseAnswer(event)" 
-                    class="btn--small" 
-                    :id="variant" 
+                    @click="(event) => chooseAnswer(event)"
+                    class="btn--small"
+                    :style="
+                        currentTask.result == variant
+                            ? 'background-color:var(--color--orange)'
+                            : ''
+                    "
+                    :id="variant"
                     :label="String(variant)"
                 />
             </div>
-            <div v-if="currentTask.level === 'hight'" class="answer--hight-level">
+            <div
+                v-if="currentTask.level === 'hight'"
+                class="answer--hight-level"
+            >
                 <div class="answer--hight-level__input">
-                    <input type="number" placeholder="..." autofocus />
+                    <div class="input-line">
+                        <Button
+                            @click="(event) => enterAnswer(event)"
+                            class="btn--micro"
+                            id="7"
+                            label="7"
+                        />
+                        <Button
+                            @click="(event) => enterAnswer(event)"
+                            class="btn--micro"
+                            id="8"
+                            label="8"
+                        />
+                        <Button
+                            @click="(event) => enterAnswer(event)"
+                            class="btn--micro"
+                            id="9"
+                            label="9"
+                        />
+                    </div>
+                    <div class="input-line">
+                        <Button
+                            @click="(event) => enterAnswer(event)"
+                            class="btn--micro"
+                            id="4"
+                            label="4"
+                        />
+                        <Button
+                            @click="(event) => enterAnswer(event)"
+                            class="btn--micro"
+                            id="5"
+                            label="5"
+                        />
+                        <Button
+                            @click="(event) => enterAnswer(event)"
+                            class="btn--micro"
+                            id="6"
+                            label="6"
+                        />
+                    </div>
+                    <div class="input-line">
+                        <Button
+                            @click="(event) => enterAnswer(event)"
+                            class="btn--micro"
+                            id="1"
+                            label="1"
+                        />
+                        <Button
+                            @click="(event) => enterAnswer(event)"
+                            class="btn--micro"
+                            id="2"
+                            label="2"
+                        />
+                        <Button
+                            @click="(event) => enterAnswer(event)"
+                            class="btn--micro"
+                            id="3"
+                            label="3"
+                        />
+                    </div>
+                    <div class="input-line">
+                        <ButtonNav
+                            @click="(event) => enterAnswer(event)"
+                            class=""
+                            id="<"
+                            label="<"
+                        />
+                        <Button
+                            @click="(event) => enterAnswer(event)"
+                            class="btn--micro"
+                            id="0"
+                            label="0"
+                        />
+                        <ButtonNav
+                            @click="(event) => enterAnswer(event)"
+                            class="btn--micro"
+                            id="X"
+                            label="X"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
         <div class="exercise-content__btn">
-            <Button :disabled="currentTask.result==='?'" @click="checkAnswer" class="btn--medium" label="Ответить" link="#" />
+            <Button
+                :disabled="currentTask.result === '?'"
+                @click="checkAnswer"
+                class="btn--medium"
+                label="Ответить"
+                link="#"
+            />
         </div>
-        <div  class="msg-box">
-            <Msg v-for="msg in messages" class="" :text="msg"/>
-
+        <div class="msg-box">
+            <Msg v-for="msg in messages" class="" :text="msg" />
         </div>
     </div>
 </template>
 
 <script setup>
-    import Button from "@/components/buttons/Button.vue";
-    import Msg from "@/components/Msg.vue";
-    import { Answers, Exercises, Operators } from "@/MTrainer";
-    import { reactive, ref } from 'vue'
-        
-    const currentTask = reactive(
-        {
-            firstOperand: 2,
-            operator: Operators.multiplication.icon,
-            secondOperand: 2,
-            result: '?',
-            level: 'low',
-            variants: [
-                3, 7, 5, 6
-            ],
-        }
-    )
+import Button from "@/components/buttons/Button.vue";
+import ButtonNav from "@/components/buttons/ButtonNav.vue";
+import Msg from "@/components/Msg.vue";
+import { Answers, Exercises, Operators } from "@/MTrainer";
+import { reactive, ref } from "vue";
 
-    const messages = reactive({});
+const currentTask = reactive({
+    firstOperand: 2,
+    operator: Operators.multiplication.icon,
+    secondOperand: 2,
+    result: "?",
+    level: "hight",
+    variants: [3, 7, 5, 6],
+});
 
-    const stat = reactive ({
-        all: 0,
-        right: 0,
-        wrong: 0
-    })
+const messages = reactive({});
 
-    function generateTask() {
-        currentTask.firstOperand = Math.round(Math.random() * (9 - 2) + 2);
-        currentTask.secondOperand = Math.round(Math.random() * (9 - 2) + 2);
-        currentTask.result = '?';
-        let arr = [];
-        arr.push(Answers.multiplication[currentTask.firstOperand][currentTask.secondOperand]-1);
-        arr.push(Answers.multiplication[currentTask.firstOperand][currentTask.secondOperand]);
-        arr.push(Answers.multiplication[currentTask.firstOperand][currentTask.secondOperand]+1);
-        currentTask.variants = arr.map(value => ({ value, sort: Math.random() }))
-                                    .sort((a, b) => a.sort - b.sort)
-                                    .map(({ value }) => value)
+const stat = reactive({
+    all: 0,
+    right: 0,
+    wrong: 0,
+});
+
+function generateTask() {
+    currentTask.firstOperand = Math.round(Math.random() * (9 - 2) + 2);
+    currentTask.secondOperand = Math.round(Math.random() * (9 - 2) + 2);
+    currentTask.result = "?";
+    let arr = [];
+    arr.push(
+        Answers.multiplication[currentTask.firstOperand][
+            currentTask.secondOperand
+        ] - 1
+    );
+    arr.push(
+        Answers.multiplication[currentTask.firstOperand][
+            currentTask.secondOperand
+        ]
+    );
+    arr.push(
+        Answers.multiplication[currentTask.firstOperand][
+            currentTask.secondOperand
+        ] + 1
+    );
+    currentTask.variants = arr
+        .map((value) => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value);
+}
+
+function chooseAnswer(event) {
+    currentTask.result = Number(event.target.id);
+}
+
+function enterAnswer(event) {
+    if (event.target.id === "<") {
+        currentTask.result = Number(String(currentTask.result).slice(0, -1));
+        return;
+    }
+    if (event.target.id === "X") {
+        currentTask.result = "?";
+        return;
+    }
+    if (currentTask.result === "?") {
+        currentTask.result = Number(event.target.id);
+        return;
     }
 
-    function chooseAnswer(event){
-        currentTask.result=Number(event.target.id);
+    if( String(currentTask.result).length === 2){
+        return;
     }
 
-    function checkAnswer(){
-        stat.all++;
-        if(
-            currentTask.result === Answers.multiplication[currentTask.firstOperand][currentTask.secondOperand]
-        ){
-            stat.right++;
-            showMsg('Верно!!!');
-            generateTask();
-        } else {
-            stat.wrong++;
-            showMsg('Ошибочка...');
-            currentTask.result = '?';
-        }
+    currentTask.result = Number(
+        String(currentTask.result) + String(event.target.id)
+    );
+    return;
+}
+
+function checkAnswer() {
+    stat.all++;
+    if (
+        currentTask.result ===
+        Answers.multiplication[currentTask.firstOperand][
+            currentTask.secondOperand
+        ]
+    ) {
+        stat.right++;
+        showMsg("Верно!!!");
+        generateTask();
+    } else {
+        stat.wrong++;
+        showMsg("Ошибочка...");
+        currentTask.result = "?";
     }
+}
 
-    function showMsg(text) {
-        let id = Number(new Date());
-        messages[id] = text;
+function showMsg(text) {
+    let id = Number(new Date());
+    messages[id] = text;
 
-        setTimeout(hideMsg, 3000, id);
-        console.log(messages);
-    }
+    setTimeout(hideMsg, 3000, id);
+}
 
-    function hideMsg(id) {
-        delete messages[id];
-    }
+function hideMsg(id) {
+    delete messages[id];
+}
 
-    generateTask();
-
+generateTask();
 </script>
 
 <style scoped>
@@ -148,7 +287,6 @@
 .msg-box {
     display: flex;
     flex-direction: column;
-
 }
 
 @media screen and (min-width: 651px) {
@@ -190,8 +328,6 @@
     font-size: 1.7rem;
     font-weight: 500;
 }
-
-
 
 .exercise-statistic__item {
     width: 150px;
@@ -250,6 +386,12 @@
 
 .choose-item--checked {
     background-color: #f89439;
+}
+
+.input-line {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0.5rem;
 }
 
 .answer--lhight-level {

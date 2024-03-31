@@ -47,8 +47,12 @@ defineProps({
     cursor: no-drop;
 }
 
+.btn--micro {
+    width: 50px;
+}
+
 .btn--small {
-    width: 70px;
+    width: 90px;
 }
 
 .btn--medium {
