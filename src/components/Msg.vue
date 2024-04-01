@@ -25,7 +25,6 @@ defineProps({
     padding: 0.6rem 1rem;
     font-weight: 500;
     font-size: 1rem;
-    box-shadow: 0 0 1rem rgba(116, 116, 116, 0.3);
 }
 
 </style>

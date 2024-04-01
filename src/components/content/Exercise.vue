@@ -284,7 +284,7 @@ generateTask();
 }
 
 .msg-box {
-    height: 30px;
+    height: 70px;
     display: flex;
     flex-direction: column;
 }
@@ -351,7 +351,7 @@ generateTask();
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    padding-top: 10vh;
+    padding-top: 10px;
 }
 
 .exercise-content input,
