@@ -254,11 +254,11 @@ function checkAnswer() {
         ]
     ) {
         stat.right++;
-        showMsg("Верно!!!", "green");
+        showMsg("Верно!!!", "var(--color--green)");
         generateTask();
     } else {
         stat.wrong++;
-        showMsg("Ошибочка...", "red");
+        showMsg("Ошибочка...", "var(--color--red)");
         currentTask.result = "?";
     }
 }
