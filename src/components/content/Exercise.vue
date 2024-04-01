@@ -266,8 +266,8 @@ function checkAnswer() {
 function showMsg(text, color) {
     let id = Number(new Date());
     messages[id] = {};
-    messages[id][text] = text;
-    messages[id][color] = color;
+    messages[id]['text'] = text;
+    messages[id]['color'] = color;
 
     console.log(messages);
     console.log(messages[id]);
