@@ -270,6 +270,8 @@ function showMsg(text, color) {
     messages[id][color] = color;
 
     console.log(messages);
+    console.log(messages[id]);
+    console.log(messages[color]);
 
     setTimeout(hideMsg, 3000, id);
 }
