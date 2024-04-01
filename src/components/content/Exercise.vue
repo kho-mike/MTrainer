@@ -42,6 +42,9 @@
         </div>
     </div>
     <div class="exercise-content">
+        <div class="msg-box">
+            <Msg v-for="msg in messages" class="" :text="msg" />
+        </div>
         <div class="exercise-content__task">
             <span class="task__item">{{ currentTask.firstOperand }}</span>
             <span class="task__item">x</span>
@@ -161,9 +164,6 @@
                 link="#"
             />
         </div>
-        <div class="msg-box">
-            <Msg v-for="msg in messages" class="" :text="msg" />
-        </div>
     </div>
 </template>
 
@@ -280,11 +280,11 @@ generateTask();
 <style scoped>
 .exercise {
     width: 100%;
-    padding: 1rem;
     color: #696f79;
 }
 
 .msg-box {
+    height: 30px;
     display: flex;
     flex-direction: column;
 }
