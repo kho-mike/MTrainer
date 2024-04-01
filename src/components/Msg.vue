@@ -25,6 +25,8 @@ defineProps({
     padding: 0.6rem 1rem;
     font-weight: 500;
     font-size: 1rem;
+
+    transition: 0.3s;
 }
 
 </style>
