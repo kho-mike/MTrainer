@@ -265,8 +265,9 @@ function checkAnswer() {
 
 function showMsg(text, color) {
     let id = Number(new Date());
-    messages[id].text = text;
-    messages[id].color = color;
+    messages[id] = {};
+    messages[id][text] = text;
+    messages[id][color] = color;
 
     setTimeout(hideMsg, 3000, id);
 }
