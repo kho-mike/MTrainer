@@ -287,6 +287,7 @@ generateTask();
     height: 70px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 @media screen and (min-width: 651px) {
