@@ -43,7 +43,7 @@
     </div>
     <div class="exercise-content">
         <div class="msg-box">
-            <Msg v-for="msg in messages" class="" :text="msg.text" :style="color: msg.color" />
+            <Msg v-for="msg in messages" :class="msg.color" :text="msg.text" />
         </div>
         <div class="exercise-content__task">
             <span class="task__item">{{ currentTask.firstOperand }}</span>
@@ -254,11 +254,11 @@ function checkAnswer() {
         ]
     ) {
         stat.right++;
-        showMsg("Верно!!!", "var(--color--green)");
+        showMsg("Верно!!!", "green");
         generateTask();
     } else {
         stat.wrong++;
-        showMsg("Ошибочка...", "var(--color--red)");
+        showMsg("Ошибочка...", "red");
         currentTask.result = "?";
     }
 }
@@ -295,6 +295,14 @@ generateTask();
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+}
+
+.msg-green {
+    color: var(--color--green);
+}
+
+.msg-red {
+    color: var(--color--red);
 }
 
 @media screen and (min-width: 651px) {
