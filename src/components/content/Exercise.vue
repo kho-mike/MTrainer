@@ -269,6 +269,8 @@ function showMsg(text, color) {
     messages[id][text] = text;
     messages[id][color] = color;
 
+    console.log(messages);
+
     setTimeout(hideMsg, 3000, id);
 }
 
