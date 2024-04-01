@@ -43,7 +43,7 @@
     </div>
     <div class="exercise-content">
         <div class="msg-box">
-            <Msg v-for="msg in messages" class="" :text="msg.text" :style="'var(--color--'+msg.color+')'" />
+            <Msg v-for="msg in messages" class="" :text="msg.text" :style="msg.color" />
         </div>
         <div class="exercise-content__task">
             <span class="task__item">{{ currentTask.firstOperand }}</span>
