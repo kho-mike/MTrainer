@@ -43,7 +43,7 @@
     </div>
     <div class="exercise-content">
         <div class="msg-box">
-            <Msg v-for="msg in messages" class="" :text="msg" />
+            <Msg v-for="msg in messages" class="" :text="msg.text" :style="'var(--color--'+msg.color+')'" />
         </div>
         <div class="exercise-content__task">
             <span class="task__item">{{ currentTask.firstOperand }}</span>
@@ -254,18 +254,19 @@ function checkAnswer() {
         ]
     ) {
         stat.right++;
-        showMsg("Верно!!!");
+        showMsg("Верно!!!", "green");
         generateTask();
     } else {
         stat.wrong++;
-        showMsg("Ошибочка...");
+        showMsg("Ошибочка...", "red");
         currentTask.result = "?";
     }
 }
 
-function showMsg(text) {
+function showMsg(text, color) {
     let id = Number(new Date());
-    messages[id] = text;
+    messages[id].text = text;
+    messages[id].color = color;
 
     setTimeout(hideMsg, 3000, id);
 }
