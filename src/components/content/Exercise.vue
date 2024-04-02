@@ -253,8 +253,8 @@ function checkAnswer() {
             currentTask.secondOperand
         ]
     ) {
-        /*
-        [
+        
+        let messagesRight = [
             'Верно!',
             'Правильно!',
             'Молодец!',
@@ -262,14 +262,23 @@ function checkAnswer() {
             'Так держать!',
             'Умница!',
             'Отлично!',
-        ][]
-        */
+            'Точно!',
+            'Хорошо!',
+        ];
         stat.right++;
-        showMsg("Верно!!!", "msg-green");
-        generateTask();
+        showMsg(messagesRight[Math.round(Math.random() * messagesRight.length)-1], "msg-green");
+        setTimeout(generateTask, 500); //generateTask();
     } else {
+        let messagesWrong = [
+            'Неверно!',
+            'Попробуй еще раз!',
+            'Неправильно!',
+            'Попробуй еще разок!',
+            'Неверно. Попробуй еще раз!',
+            'Неправильно. Попробуй еще разок!',
+        ]
         stat.wrong++;
-        showMsg("Ошибочка...", "msg-red");
+        showMsg(messagesWrong[Math.round(Math.random() * messagesWrong.length)-1], "msg-red");
         currentTask.result = "?";
     }
 }
