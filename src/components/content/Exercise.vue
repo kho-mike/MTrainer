@@ -253,6 +253,17 @@ function checkAnswer() {
             currentTask.secondOperand
         ]
     ) {
+        /*
+        [
+            'Верно!',
+            'Правильно!',
+            'Молодец!',
+            'Это верный ответ!',
+            'Так держать!',
+            'Умница!',
+            'Отлично!',
+        ][]
+        */
         stat.right++;
         showMsg("Верно!!!", "msg-green");
         generateTask();
