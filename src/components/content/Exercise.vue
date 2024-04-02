@@ -266,7 +266,7 @@ function checkAnswer() {
             'Хорошо!',
         ];
         stat.right++;
-        showMsg(messagesRight[Math.round(Math.random() * messagesRight.length)-1], "msg-green");
+        showMsg(messagesRight[Math.round(Math.random() * messagesRight.length)], "msg-green");
         setTimeout(generateTask, 500); //generateTask();
     } else {
         let messagesWrong = [
@@ -278,7 +278,7 @@ function checkAnswer() {
             'Неправильно. Попробуй еще разок!',
         ]
         stat.wrong++;
-        showMsg(messagesWrong[Math.round(Math.random() * messagesWrong.length)-1], "msg-red");
+        showMsg(messagesWrong[Math.round(Math.random() * messagesWrong.length)], "msg-red");
         currentTask.result = "?";
     }
 }
@@ -288,11 +288,6 @@ function showMsg(text, color) {
     messages[id] = {};
     messages[id]['text'] = text;
     messages[id]['color'] = color;
-
-    console.log(messages);
-    console.log(messages[id]);
-    console.log(messages[color]);
-
     setTimeout(hideMsg, 2000, id);
 }
 
