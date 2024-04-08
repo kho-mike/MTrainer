@@ -20,7 +20,7 @@ import Exercise from "./components/content/Exercise.vue";
     </div>
     <div class="header-center">
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
+      <RouterLink to="/test">Test</RouterLink>
     </div>
     <div class="header-end">
       <div class="userBar">
