@@ -9,7 +9,7 @@ watch(
   () => user2,
   (user2, prevUser2) => {
     /* ... */
-    user2 = ref(localStorage.userName || 'Гость');
+    console.log(user2);
   }
 )
 
