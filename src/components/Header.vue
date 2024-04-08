@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, ref } from "vue";
+import { reactive, ref, watch } from "vue";
 import Button from "./buttons/Button.vue";
 import ButtonNav from "./buttons/ButtonNav.vue";
 
