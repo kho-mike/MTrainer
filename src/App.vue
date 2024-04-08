@@ -28,7 +28,7 @@ import Exercise from "./components/content/Exercise.vue";
           <div class="userBar-btn-avatar">
             <div class="avatar-box">
               <img
-                src="../assets/img/avatar.jpg"
+                src="./assets/img/avatar.jpg"
                 height="50rem"
                 class="img-avatar--small"
                 alt="avatar"
