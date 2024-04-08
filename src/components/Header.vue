@@ -6,7 +6,7 @@ import ButtonNav from "./buttons/ButtonNav.vue";
 const user2 = ref(localStorage.userName || 'Гость');
 
 watch(
-  () => state,
+  () => user2,
   (newValue, oldValue) => {
     // newValue === oldValue
   },
