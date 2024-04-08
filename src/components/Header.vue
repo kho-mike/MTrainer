@@ -3,11 +3,34 @@ import { reactive, ref } from "vue";
 import Button from "./buttons/Button.vue";
 import ButtonNav from "./buttons/ButtonNav.vue";
 
-
+const user2 = ref(localStorage.userName || 'Гость');
 
 const user = reactive({
     name: localStorage.userName || 'Гость',
 });
+
+
+
+/*
+fetch('https://api.example.com/data', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ key: 'value' })
+  })
+    .then(response =&gt; response.json())
+    .then(data =&gt; console.log(data))
+    .catch(error =&gt; console.error(error));
+*/
+  
+
+
+
+
+
+
+
 </script>
 
 <template>
@@ -33,7 +56,7 @@ const user = reactive({
                             />
                         </div>
                     </div>
-                    <div class="userBar-btn-title">{{ user.name }}</div>
+                    <div class="userBar-btn-title">{{ user2 }}</div>
                 </div>
                 <div class="userBar-menu header-item">
                     <ButtonNav class="btn-nav-back" label="Выход" link="#" />
