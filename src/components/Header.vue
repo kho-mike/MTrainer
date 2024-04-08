@@ -5,6 +5,14 @@ import ButtonNav from "./buttons/ButtonNav.vue";
 
 const user2 = ref(localStorage.userName || 'Гость');
 
+watch(
+  () => state,
+  (newValue, oldValue) => {
+    // newValue === oldValue
+  },
+  { deep: true }
+)
+
 const user = reactive({
     name: localStorage.userName || 'Гость',
 });
@@ -56,7 +64,7 @@ fetch('https://api.example.com/data', {
                             />
                         </div>
                     </div>
-                    <div class="userBar-btn-title">{{ user2 }}</div>
+                    <div class="userBar-btn-title">{{ user2.value }}</div>
                 </div>
                 <div class="userBar-menu header-item">
                     <ButtonNav class="btn-nav-back" label="Выход" link="#" />
