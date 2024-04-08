@@ -5,7 +5,7 @@ import ButtonNav from "./buttons/ButtonNav.vue";
 
 
 const user = reactive({
-    name: document.localStorage.userName || 'Гость',
+    name: 'Гость',
 });
 </script>
 
@@ -32,7 +32,7 @@ const user = reactive({
                             />
                         </div>
                     </div>
-                    <div class="userBar-btn-title">Гость</div>
+                    <div class="userBar-btn-title">{{ user.name }}</div>
                 </div>
                 <div class="userBar-menu header-item">
                     <ButtonNav class="btn-nav-back" label="Выход" link="#" />
