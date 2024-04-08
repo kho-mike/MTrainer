@@ -1,21 +1,15 @@
 <script setup>
-import { reactive, ref, watch } from "vue";
+import { computed, reactive, ref, watch } from "vue";
 import Button from "./buttons/Button.vue";
 import ButtonNav from "./buttons/ButtonNav.vue";
 
 const user2 = ref(localStorage.userName || 'Гость');
 
-watch(
-  () => user2,
-  (user2, prevUser2) => {
-    /* ... */
-    console.log(user2);
-  }
-)
 
-const user = reactive({
-    name: localStorage.userName || 'Гость',
+computed(() => {
+    user2.value = localStorage.userName;
 });
+
 
 
 
