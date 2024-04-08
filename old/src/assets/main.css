@@ -1,0 +1,67 @@
+
+@font-face {
+    font-weight: 300;
+    font-family: "Ubuntu";
+    src: url("./fonts/Ubuntu-Light.ttf");
+}
+
+@font-face {
+    font-weight: 500;
+    font-family: "Ubuntu";
+    src: url("./fonts/Ubuntu-Medium.ttf");
+}
+
+@font-face {
+    font-weight: 700;
+    font-family: "Ubuntu";
+    src: url("./fonts/Ubuntu-Bold.ttf");
+}
+
+:root {
+    --color-bg--dark: #F5F5F5;
+    --color-bg--ligth: #FFFFFF;
+
+    --color-btn--grey: #8692A6;
+    --color-btn--white: #FFFFFF;
+    --color-btn--red: #ED3B2F;
+    --color-btn--orange: #F89439;
+    --color-btn--green: #51BE69;
+    --color-btn--disabled: #d3d5d8;
+
+    --color-text--dark: #696F79;
+    --color-text--ligth: #FFFFFF;
+    --color-text--red: #DE6944;
+
+    --color--orange: #F89439;
+    --color--green: #51BE69;
+    --color--red: #ED3B2F;
+
+}
+
+body {
+    margin: 0;
+    padding: 0
+}
+
+.wrapper {
+    background-color: var(--color-bg--dark);
+    color: var(--color-text--dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;;
+    padding: 0 10vw;
+    margin: 0;
+    font-family: "Ubuntu";
+}
+
+@media screen and (max-width: 400px) {
+    .wrapper {
+        padding: 0 1vw;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
