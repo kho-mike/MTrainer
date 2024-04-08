@@ -4,8 +4,9 @@ import Button from "./buttons/Button.vue";
 import ButtonNav from "./buttons/ButtonNav.vue";
 
 
+
 const user = reactive({
-    name: 'Гость',
+    name: localStorage.userName || 'Гость',
 });
 </script>
 
