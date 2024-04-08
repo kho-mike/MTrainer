@@ -7,10 +7,10 @@ const user2 = ref(localStorage.userName || 'Гость');
 
 watch(
   () => user2,
-  (newValue, oldValue) => {
-    // newValue === oldValue
-  },
-  { deep: true }
+  (user2, prevUser2) => {
+    /* ... */
+    user2 = ref(localStorage.userName || 'Гость');
+  }
 )
 
 const user = reactive({
