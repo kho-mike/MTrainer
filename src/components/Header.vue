@@ -1,6 +1,12 @@
 <script setup>
+import { reactive, ref } from "vue";
 import Button from "./buttons/Button.vue";
 import ButtonNav from "./buttons/ButtonNav.vue";
+
+
+const user = reactive({
+    name: document.localStorage.userName || 'Гость',
+});
 </script>
 
 <template>
