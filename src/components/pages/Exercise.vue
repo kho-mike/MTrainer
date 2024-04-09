@@ -168,9 +168,9 @@
 </template>
 
 <script setup>
-import Button from "@/components/buttons/Button.vue";
-import ButtonNav from "@/components/buttons/ButtonNav.vue";
-import Msg from "@/components/Msg.vue";
+import Button       from "@/components/elements/Button.vue";
+import ButtonNav    from "@/components/elements/ButtonNav.vue";
+import Msg          from "@/components/elements/Msg.vue";
 import { Answers, Exercises, Operators } from "@/MTrainer";
 import { reactive, ref } from "vue";
 

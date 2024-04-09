@@ -60,9 +60,9 @@
 </template>
 
 <script setup>
-import Button from "@/components/buttons/Button.vue";
-import ButtonNav from "@/components/buttons/ButtonNav.vue";
-import Msg from "@/components/Msg.vue";
+import Button      from "@/components/elements/Button.vue";
+import ButtonNav   from "@/components/elements/ButtonNav.vue";
+import Msg         from "@/components/elements/Msg.vue";
 import { reactive, ref } from "vue";
 
 </script>
@@ -73,6 +73,7 @@ import { reactive, ref } from "vue";
         min-height: 80vh;
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 
     /************** form ***************/

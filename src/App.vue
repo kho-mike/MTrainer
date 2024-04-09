@@ -1,9 +1,9 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import { computed, reactive, ref, watch } from "vue";
-import Button from "./components/buttons/Button.vue";
-import ButtonNav from "./components/buttons/ButtonNav.vue";
-import Exercise from "./components/content/Exercise.vue";
+import Button from "./components/elements/Button.vue";
+import ButtonNav from "./components/elements/ButtonNav.vue";
+
 
 </script>
 
