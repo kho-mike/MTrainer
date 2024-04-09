@@ -31,7 +31,12 @@
 
             <div class="form-item">
                 <div class="form-button">
-                    <input type="submit" name="login" value="Войти">
+                    <Button
+                            type="submit"
+                            class="btn--medium"
+                            id=""
+                            label="Войти"
+                        />
                 </div>
             </div>
 
