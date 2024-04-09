@@ -11,15 +11,14 @@
     box-sizing: border-box;
     border: 0;
     margin: auto 5px;
-    color: var(--color-text--ligth);
-    background-color: var(--color-btn--grey);
+    color: var(--color-text--dark);
+    background-color: var(--color-btn--white);
     border-radius: 2rem;
     padding: 1rem;
     font-weight: 500;
     font-size: 1rem;
     box-shadow: 0 0 1rem rgba(116, 116, 116, 0.3);
-    cursor: pointer;
-    text-align: center;
+    text-align: start;
 
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
