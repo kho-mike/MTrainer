@@ -12,13 +12,13 @@
             <div class="form-item">
                 <div class="form-input-box">
                     <label for="login">Логин*</label>
-                    <input type="text" name="login" placeholder="Логин">
+                    <Inp type="text" name="login" placeholder="Логин" />
                 </div>
             </div>
             <div class="form-item">
                 <div class="form-input-box">
                     <label for="pass">Пароль*</label>
-                    <input type="password" name="pass" placeholder="Пароль">
+                    <Inp type="password" name="pass" placeholder="Пароль" />
                 </div>
             </div>
 
@@ -72,6 +72,7 @@
 <script setup>
 import Button      from "@/components/elements/Button.vue";
 import ButtonNav   from "@/components/elements/ButtonNav.vue";
+import Inp       from "@/components/elements/Input.vue";
 import Msg         from "@/components/elements/Msg.vue";
 import { reactive, ref } from "vue";
 
