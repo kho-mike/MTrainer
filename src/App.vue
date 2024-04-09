@@ -22,6 +22,7 @@ import ButtonNav  from "@/components/elements/ButtonNav.vue";
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/test">Test</RouterLink>
       <RouterLink to="/login">Login</RouterLink>
+      <RouterLink to="/reg">Reg</RouterLink>
     </div>
     <div class="header-end">
       <div class="userBar">

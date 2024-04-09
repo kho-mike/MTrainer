@@ -1,11 +1,127 @@
 <template>
+    <div class="login">
+        <form action="http://mtrainer.khozyaz4.beget.tech/login" method="post">
+
+            <div class="form-item">
+                <div class="form-header">
+                    <h2>Математический ренажер</h2>
+                    <p>регистрация нового аккаунта</p>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div class="form-input-box">
+                    <label for="login">Логин*</label>
+                    <Inp type="text" name="login" placeholder="Логин" />
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="form-input-box">
+                    <label for="pass">Пароль*</label>
+                    <Inp type="password" name="pass" placeholder="Пароль" />
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="form-input-box">
+                    <label for="passRepeat">Повтор пароля*</label>
+                    <Inp type="password" name="passRepeat" placeholder="Повтор пароля" />
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div class="form-button">
+                    <a href="#">
+                        <Button
+                            type="button"
+                            class="btn--max"
+                            id=""
+                            label="Зарегистрироваться"
+                        />
+                    </a>
+                    
+                </div>
+            </div>
+           
+        </form>
+    </div>
     
 </template>
 
 <script setup>
+import Button      from "@/components/elements/Button.vue";
+import ButtonNav   from "@/components/elements/ButtonNav.vue";
+import Inp       from "@/components/elements/Input.vue";
+import Msg         from "@/components/elements/Msg.vue";
+import { reactive, ref } from "vue";
 
 </script>
 
 <style scoped>
+    .login {
+
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /************** form ***************/
+
+    label {
+        color: #8692A6;
+    }
+    
+    form input:not([type=checkbox]) {
+        width: 20rem;
+    }
+    
+    .form-item {
+        margin: 0.5rem;
+    }
+    
+    .form-header {
+        margin-bottom: 1rem;
+    }
+    
+    .form-header p {
+        color: #8692A6;
+    }
+    
+    .form-header * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .form-input-box {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .form-checkbox {
+        display: flex;
+    }
+    
+    
+    
+    .form-button {
+    
+    }
+    
+    
+    .form-submit {
+        margin-top: 2rem;
+    
+    }
+    
+    .form-separator {
+        color: #8692A6;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .form-separator .hr {
+        flex-grow: 1;
+        padding: 0 5px;
+    }
 
 </style>
