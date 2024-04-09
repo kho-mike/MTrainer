@@ -60,6 +60,10 @@
 </template>
 
 <script setup>
+import Button from "@/components/buttons/Button.vue";
+import ButtonNav from "@/components/buttons/ButtonNav.vue";
+import Msg from "@/components/Msg.vue";
+import { reactive, ref } from "vue";
 
 </script>
 
@@ -69,6 +73,65 @@
         min-height: 80vh;
         display: flex;
         align-items: center;
+    }
+
+    /************** form ***************/
+
+    label {
+        color: #8692A6;
+    }
+    
+    form input:not([type=checkbox]) {
+        width: 20rem;
+    }
+    
+    .form-item {
+        margin: 0.5rem;
+    }
+    
+    .form-header {
+        margin-bottom: 1rem;
+    }
+    
+    .form-header p {
+        color: #8692A6;
+    }
+    
+    .form-header * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .form-input-box {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .form-checkbox {
+        display: flex;
+    }
+    
+    
+    
+    .form-button {
+    
+    }
+    
+    
+    .form-submit {
+        margin-top: 2rem;
+    
+    }
+    
+    .form-separator {
+        color: #8692A6;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .form-separator .hr {
+        flex-grow: 1;
+        padding: 0 5px;
     }
 
 </style>
