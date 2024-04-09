@@ -21,6 +21,7 @@ import Exercise from "./components/content/Exercise.vue";
     <div class="header-center">
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/test">Test</RouterLink>
+      <RouterLink to="/login">Login</RouterLink>
     </div>
     <div class="header-end">
       <div class="userBar">
