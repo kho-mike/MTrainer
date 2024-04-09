@@ -46,8 +46,6 @@
             <div class="form-item">
                 <div class="form-separator">
                     <span class="hr"><hr></span>
-                    <span>или</span>
-                    <span class="hr"><hr></span>
                 </div>
             </div>
 
