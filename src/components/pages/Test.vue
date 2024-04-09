@@ -6,6 +6,8 @@
 
 <script setup>
 
+console.log('This is Test page!');
+
 </script>
 
 <style scoped>

@@ -70,6 +70,9 @@
 </template>
 
 <script setup>
+
+console.log('This is Login page!');
+
 import Button      from "@/components/elements/Button.vue";
 import ButtonNav   from "@/components/elements/ButtonNav.vue";
 import Inp       from "@/components/elements/Input.vue";
