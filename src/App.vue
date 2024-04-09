@@ -46,15 +46,7 @@ import Exercise from "./components/content/Exercise.vue";
     </div>
   </div>
 
-
-
-
-
-
-
-
   <div class="content">
-    <!-- <Exercise /> -->
     <RouterView />
   </div>
 
