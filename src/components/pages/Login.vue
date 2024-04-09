@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-        <form action="./temp-profile.html" method="post">
+        <form action="http://mtrainer.khozyaz4.beget.tech/login" method="post">
 
             <div class="form-item">
                 <div class="form-header">
@@ -17,8 +17,8 @@
             </div>
             <div class="form-item">
                 <div class="form-input-box">
-                    <label for="password">Пароль*</label>
-                    <input type="password" name="password" placeholder="Пароль">
+                    <label for="pass">Пароль*</label>
+                    <input type="password" name="pass" placeholder="Пароль">
                 </div>
             </div>
 
@@ -33,10 +33,10 @@
                 <div class="form-button">
                     <Button
                             type="submit"
-                            class="btn--medium"
+                            class="btn--max"
                             id=""
                             label="Войти"
-                        />
+                    />
                 </div>
             </div>
 
@@ -52,8 +52,13 @@
 
             <div class="form-item">
                 <div class="form-button">
-                    <a href="http://localhost:5500/temp-register.html">
-                        <input type="button" name="register" value="Зарегистрироваться">
+                    <a href="#">
+                        <Button
+                            type="button"
+                            class="btn--max"
+                            id=""
+                            label="Зарегистрироваться"
+                        />
                     </a>
                     
                 </div>

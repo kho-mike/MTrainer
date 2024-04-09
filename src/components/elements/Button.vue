@@ -63,4 +63,8 @@ defineProps({
     width: 200px;
 }
 
+.btn--max {
+    width: 100%;
+}
+
 </style>
