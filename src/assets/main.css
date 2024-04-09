@@ -39,6 +39,7 @@
 }
 
 body {
+    background-color: var(--color-bg--dark);
     margin: 0;
     padding: 0
 }
@@ -50,14 +51,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: start;;
-    padding: 0 10vw;
-    margin: 0;
+    margin: 0 auto;
+    width: 1000px;
     font-family: "Ubuntu";
 }
 
 @media screen and (max-width: 400px) {
     .wrapper {
-        padding: 0 1vw;
+        width: 100%;
     }
 }
 
