@@ -73,10 +73,9 @@
 
             <div class="form-item">
                 <div class="form-button">
-                    <a href="#">
+                    <RouterLink to="/home">
                         <ButtonNav class="btn-nav-back" label="Назад" link="#" />
-                    </a>
-                    
+                    </RouterLink>                    
                 </div>
             </div>
 
