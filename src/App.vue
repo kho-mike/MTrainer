@@ -1,4 +1,8 @@
 <script setup>
+
+const response = new Response();
+console.log( response );
+
 import { RouterLink, RouterView } from "vue-router";
 import { computed, reactive, ref, watch } from "vue";
 import Button     from "@/components/elements/Button.vue";
