@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-        <form action="http://mtrainer.khozyaz4.beget.tech/login" method="post">
+        <form action="/login" method="post">
 
             <div class="form-item">
                 <div class="form-header">
