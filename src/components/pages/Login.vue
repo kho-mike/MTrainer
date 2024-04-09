@@ -52,15 +52,14 @@
 
             <div class="form-item">
                 <div class="form-button">
-                    <a href="#">
+                    <RouterLink to="/reg">
                         <Button
                             type="button"
                             class="btn--max"
                             id=""
                             label="Зарегистрироваться"
                         />
-                    </a>
-                    
+                    </RouterLink>                    
                 </div>
             </div>
 
