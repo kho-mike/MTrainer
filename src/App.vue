@@ -1,7 +1,15 @@
 <script setup>
 
 const response = new Response();
+console.log( 'response' );
 console.log( response );
+
+if( response.status === 200 ){
+  localStorage.inputStatus = response.status;
+}
+
+console.log('localStorage');
+console.log(localStorage);
 
 import { RouterLink, RouterView } from "vue-router";
 import { computed, reactive, ref, watch } from "vue";
