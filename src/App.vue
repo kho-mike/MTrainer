@@ -1,8 +1,8 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import { computed, reactive, ref, watch } from "vue";
-import Button from "./components/elements/Button.vue";
-import ButtonNav from "./components/elements/ButtonNav.vue";
+import Button     from "@/components/elements/Button.vue";
+import ButtonNav  from "@/components/elements/ButtonNav.vue";
 
 
 </script>
