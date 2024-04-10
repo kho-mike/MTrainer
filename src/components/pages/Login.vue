@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-        <form action="https://mtrainer.khomike.ru" method="post">
+        <form action="https://mtrainer.khomike.ru/login" method="post">
 
             <div class="form-item">
                 <div class="form-header">
