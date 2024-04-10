@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-        <form @submit.prevent="onSubmit" action="/login" method="post">
+        <form action="https://mtrainer.khomike.ru" method="post">
 
             <div class="form-item">
                 <div class="form-header">
@@ -95,26 +95,7 @@ import Inp       from "@/components/elements/Input.vue";
 import Msg         from "@/components/elements/Msg.vue";
 import { reactive, ref } from "vue";
 
-
-function onSubmit(event) {
-    console.log('This is onSubmit!');
-
-    let user = {
-        login: 'qwe',
-        pass: '123'
-    };
-
-    fetch('https://mtrainer.khomike.ru', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json;charset=utf-8'
-            },
-        body: JSON.stringify(user)
-    })
-    .then(response => response.json())
-    .then(result => console.log(result.message) /* обрабатываем результат */);
-
-}
+console.log( document.cookie );
 
 </script>
 
