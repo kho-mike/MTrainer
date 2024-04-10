@@ -104,7 +104,7 @@ function onSubmit(event) {
         pass: '123'
     };
 
-    fetch(url, {
+    fetch('https://mtrainer.khomike.ru', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
