@@ -95,6 +95,11 @@ import Inp       from "@/components/elements/Input.vue";
 import Msg         from "@/components/elements/Msg.vue";
 import { reactive, ref } from "vue";
 
+
+function onSubmit(event) {
+    console.log('This is onSubmit!');
+}
+
 </script>
 
 <style scoped>
