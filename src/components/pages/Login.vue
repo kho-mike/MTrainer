@@ -104,16 +104,16 @@ function onSubmit(event) {
         pass: '123'
     };
 
-    let response = await fetch('https://mtrainer.khomike.ru/login', {
+    fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
             },
         body: JSON.stringify(user)
-    });
+    })
+    .then(response => response.json())
+    .then(result => console.log(result.message) /* обрабатываем результат */);
 
-    let result = await response.json();
-    console.log(result.message);
 }
 
 </script>
