@@ -95,6 +95,25 @@ import Inp       from "@/components/elements/Input.vue";
 import Msg         from "@/components/elements/Msg.vue";
 import { reactive, ref } from "vue";
 
+let user = {
+  login: 'John',
+  pass: 'Smith'
+};
+
+function onSubmit(event) {
+    fetch('https://mtrainer.khomike.ru/login', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json;charset=utf-8'
+  },
+  body: JSON.stringify(user))
+  .then(response => response.json())
+  .then(result => console.log( result ); /* обрабатываем результат */);
+
+}
+
+
+
 console.log( document.cookie );
 
 </script>

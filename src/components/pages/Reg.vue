@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-        <form action="/reg" method="post">
+        <form action="https://mtrainer.khomike.ru/reg" method="post">
 
             <div class="form-item">
                 <div class="form-header">
@@ -32,7 +32,7 @@
                 <div class="form-button">
                     <a href="#">
                         <Button
-                            type="button"
+                            type="submit"
                             class="btn--max"
                             id=""
                             label="Зарегистрироваться"
