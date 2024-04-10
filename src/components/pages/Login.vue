@@ -98,6 +98,22 @@ import { reactive, ref } from "vue";
 
 function onSubmit(event) {
     console.log('This is onSubmit!');
+
+    let user = {
+        login: 'qwe',
+        pass: '123'
+    };
+
+    let response = await fetch('https://mtrainer.khomike.ru/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+            },
+        body: JSON.stringify(user)
+    });
+
+    let result = await response.json();
+    console.log(result.message);
 }
 
 </script>
