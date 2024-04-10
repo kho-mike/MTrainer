@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-        <form action="/login" method="post">
+        <form @submit.prevent="onSubmit" action="/login" method="post">
 
             <div class="form-item">
                 <div class="form-header">
