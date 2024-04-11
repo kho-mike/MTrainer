@@ -55,9 +55,14 @@ import { computed, reactive, ref, watch } from "vue";
 import Button from "@/components/elements/Button.vue";
 import ButtonNav from "@/components/elements/ButtonNav.vue";
 
+const response = new Response();
+if(response.body){
+    localStorage.user.id = response.body.id;
+    localStorage.user.login = response.body.login;
+}
 
 const user = reactive( {
-    id: localStorage.userID,
+    login: localStorage.user.login || 'Guest',
 } );
 console.log(user);
 
