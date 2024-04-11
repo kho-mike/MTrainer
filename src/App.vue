@@ -12,14 +12,14 @@
                 />
             </div>
         </div>
-        <div v-if="user.id==='444'" class="header-center">
+        <div v-if="user.name==='Guest'" class="header-center">
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/test">Test</RouterLink>
             <RouterLink to="/login">Login</RouterLink>
             <RouterLink to="/reg">Reg</RouterLink>
         </div>
         <div class="header-end">
-            <div class="userBar">
+            <div v-if="user.name!=='Guest" class="userBar">
                 <div class="userBar-btn header-item">
                     <div class="userBar-btn-avatar">
                         <div class="avatar-box">
@@ -31,13 +31,20 @@
                             />
                         </div>
                     </div>
-                    <div class="userBar-btn-title">Гость</div>
+                    <div class="userBar-btn-title">{{ user.login }}</div>
                 </div>
                 <div class="userBar-menu header-item">
                     <ButtonNav class="btn-nav-back" label="Выход" link="#" />
                     <Button class="btn--medium" label="Настройки" link="#" />
                 </div>
             </div>
+
+            <div v-if="user.name==='Guest" class="userBar">
+                <div class="userBar-menu header-item">
+                    <Button class="btn--medium" label="Войти" link="#" />
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -56,22 +63,19 @@ import Button from "@/components/elements/Button.vue";
 import ButtonNav from "@/components/elements/ButtonNav.vue";
 
 const response = new Response();
-if(response.body){
-    localStorage.user.id = response.body.id;
-    localStorage.user.login = response.body.login;
+if(response.body.userToken){
+    localStorage.userToken = response.body.userToken;
+    localStorage.userName = response.body.userName;
 }
 
 const user = reactive( {
-    login: null,
+    name: 'Guest',
 } );
 
-if(localStorage.user){
-    user.login = localStorage.user.login;
-    console.log(user);
+if(localStorage.userName){
+    user.name = localStorage.userName;
+
 }
-
-console.log(response.body);
-
 
 </script>
 
