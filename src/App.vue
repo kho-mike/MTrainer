@@ -12,7 +12,7 @@
                 />
             </div>
         </div>
-        <div v-if="user==='Mike'" class="header-center">
+        <div v-if="user.value==='Mike'" class="header-center">
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/test">Test</RouterLink>
             <RouterLink to="/login">Login</RouterLink>
@@ -55,9 +55,9 @@ import { computed, reactive, ref, watch } from "vue";
 import Button from "@/components/elements/Button.vue";
 import ButtonNav from "@/components/elements/ButtonNav.vue";
 
-const user = ref('guest');
-const userModify = computed(() => {
-    user = document.cookie.user;
+// const user = ref('guest');
+const user = computed(() => {
+    return document.cookie.user;
 });
 
 </script>
