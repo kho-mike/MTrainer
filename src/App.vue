@@ -19,7 +19,7 @@
             <RouterLink to="/reg">Reg</RouterLink>
         </div>
         <div class="header-end">
-            <div v-if="user.name!=='Guest" class="userBar">
+            <div v-if="user.name!=='Guest'" class="userBar">
                 <div class="userBar-btn header-item">
                     <div class="userBar-btn-avatar">
                         <div class="avatar-box">
@@ -39,7 +39,7 @@
                 </div>
             </div>
 
-            <div v-if="user.name==='Guest" class="userBar">
+            <div v-if="user.name==='Guest'" class="userBar">
                 <div class="userBar-menu header-item">
                     <Button class="btn--medium" label="Войти" link="#" />
                 </div>
