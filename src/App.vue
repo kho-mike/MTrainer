@@ -12,7 +12,7 @@
                 />
             </div>
         </div>
-        <div v-if="user==='Mike'" class="header-center">
+        <div v-if="user.id==='Mike'" class="header-center">
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/test">Test</RouterLink>
             <RouterLink to="/login">Login</RouterLink>
