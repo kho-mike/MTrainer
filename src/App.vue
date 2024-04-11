@@ -61,9 +61,12 @@ if(response.body){
     localStorage.user.login = response.body.login;
 }
 
-const user = reactive( {
-    login: localStorage.user.login || 'Guest',
-} );
+if(localStorage.user){
+    const user = reactive( {
+        login: localStorage.user.login || 'Guest',
+    } );
+}
+
 
 console.log(user);
 console.log(response.body);
