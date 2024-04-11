@@ -10,7 +10,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: Login
+      component: Exercise
     },
     {
       path: '/test',
@@ -24,7 +24,7 @@ const router = createRouter({
     {
       path: '/login',
       name: 'login',
-      component: Exercise
+      component: Login
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.

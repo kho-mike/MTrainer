@@ -5,21 +5,17 @@
                 <div class="site-logo">
                     <h2>MTrainer</h2>
                 </div>
-                <Button
+                <RouterLink to="/"><Button
                     class="btn--medium btn-toMain"
                     label="To Main"
                     link="#"
-                />
+                /></RouterLink>
             </div>
         </div>
-        <div v-if="user.name==='Guest'" class="header-center">
-            <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/test">Test</RouterLink>
-            <RouterLink to="/login">Login</RouterLink>
-            <RouterLink to="/reg">Reg</RouterLink>
+        <div v-if="user.name=='Guest'" class="header-center">
         </div>
         <div class="header-end">
-            <div v-if="user.name!=='Guest'" class="userBar">
+            <div v-if="user.name" class="userBar">
                 <div class="userBar-btn header-item">
                     <div class="userBar-btn-avatar">
                         <div class="avatar-box">
@@ -31,17 +27,17 @@
                             />
                         </div>
                     </div>
-                    <div class="userBar-btn-title">{{ user.login }}</div>
+                    <div class="userBar-btn-title btn--medium">{{ user.name }}</div>
                 </div>
                 <div class="userBar-menu header-item">
-                    <ButtonNav class="btn-nav-back" label="Выход" link="#" />
+                    <ButtonNav  @click="(event) => exit(event)" class="btn-nav-back" label="Выход" link="#" />
                     <Button class="btn--medium" label="Настройки" link="#" />
                 </div>
             </div>
 
-            <div v-if="user.name==='Guest'" class="userBar">
-                <div class="userBar-menu header-item">
-                    <Button class="btn--medium" label="Войти" link="#" />
+            <div v-if="!user.name" class="userBar asdsa">
+                <div class="guestBar-menu header-item">
+                    <RouterLink to="/login"><Button class="btn--medium" label="Войти" link="#" /></RouterLink>
                 </div>
             </div>
 
@@ -51,8 +47,6 @@
     <div class="content">
         <RouterView />
     </div>
-
-    <Content />
 </template>
 
 <script setup>
@@ -62,19 +56,32 @@ import { computed, reactive, ref, watch } from "vue";
 import Button from "@/components/elements/Button.vue";
 import ButtonNav from "@/components/elements/ButtonNav.vue";
 
+
+// localStorage.setItem('myVar', 'Is my var'); // добавляем элемент в localstorage
+// localStorage.removeItem('myVar'); // вернёт undefined, элемент с именем myVar удалён
+
 const response = new Response();
-if(response.body.userToken){
-    localStorage.userToken = response.body.userToken;
-    localStorage.userName = response.body.userName;
+
+if(response.body){
+    if(response.body.userToken){
+    localStorage.setItem('userToken', response.body.userToken);
+    localStorage.setItem('userName', response.body.userName)
+    }
 }
 
 const user = reactive( {
-    name: 'Guest',
+    name: null,
 } );
 
 if(localStorage.userName){
     user.name = localStorage.userName;
 
+}
+
+function exit() {
+    localStorage.removeItem('userToken');
+    localStorage.removeItem('userName');
+    user.name = null;
 }
 
 </script>
