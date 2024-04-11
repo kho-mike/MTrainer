@@ -64,10 +64,8 @@ if(response.body){
 const user = reactive( {
     login: localStorage.user.login || 'Guest',
 } );
+
 console.log(user);
-
-
-const response = new Response();
 console.log(response.body);
 
 
