@@ -60,6 +60,8 @@ const user = reactive( {
     id: document.cookie.userID,
 } );
 
+console.log(user);
+
 
 </script>
 
