@@ -57,7 +57,7 @@ import ButtonNav from "@/components/elements/ButtonNav.vue";
 
 
 const user = reactive( {
-    id: document.cookie.userID,
+    id: localStorage.userID,
 } );
 
 console.log(user);
