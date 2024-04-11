@@ -12,7 +12,7 @@
                 />
             </div>
         </div>
-        <div v-if="user.value==='Mike'" class="header-center">
+        <div v-if="user==='Mike'" class="header-center">
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/test">Test</RouterLink>
             <RouterLink to="/login">Login</RouterLink>
@@ -59,6 +59,8 @@ import ButtonNav from "@/components/elements/ButtonNav.vue";
 const user = computed(() => {
     return document.cookie.user;
 });
+
+console.log(user);
 
 </script>
 
