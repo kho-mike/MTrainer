@@ -57,23 +57,8 @@ import ButtonNav from "@/components/elements/ButtonNav.vue";
 
 const user = computed(() => {
   return document.cookie.user;
-})
-
-
-/*
-Вариант 1.
-Пользователь заходит первый раз
-- куки нет
-- локал нет
-
-
-*/
-
-watch(() => document.cookie.user, () => {
-    user.value = document.cookie.user;
 });
 
-const user = ref(document.cookie.user || null);
 </script>
 
 <style>
