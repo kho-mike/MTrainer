@@ -56,8 +56,8 @@ import Button from "@/components/elements/Button.vue";
 import ButtonNav from "@/components/elements/ButtonNav.vue";
 
 const user = ref('guest');
-const user = computed(() => {
-  return document.cookie.user;
+const userModify = computed(() => {
+    user = document.cookie.user;
 });
 
 </script>
