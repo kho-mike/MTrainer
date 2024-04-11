@@ -12,7 +12,7 @@
                 />
             </div>
         </div>
-        <div v-if="user.id==='Mike'" class="header-center">
+        <div v-if="user.id==='444'" class="header-center">
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/test">Test</RouterLink>
             <RouterLink to="/login">Login</RouterLink>
@@ -57,7 +57,7 @@ import ButtonNav from "@/components/elements/ButtonNav.vue";
 
 
 const user = reactive( {
-    id: null,
+    id: document.cookie.userID,
 } );
 
 
