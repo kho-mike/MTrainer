@@ -12,7 +12,7 @@
                 />
             </div>
         </div>
-        <div v-if="user=='mIKE'" class="header-center">
+        <div v-if="user==='Mike'" class="header-center">
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/test">Test</RouterLink>
             <RouterLink to="/login">Login</RouterLink>
@@ -49,10 +49,25 @@
 </template>
 
 <script setup>
+
 import { RouterLink, RouterView } from "vue-router";
 import { computed, reactive, ref, watch } from "vue";
 import Button from "@/components/elements/Button.vue";
 import ButtonNav from "@/components/elements/ButtonNav.vue";
+
+const user = computed(() => {
+  return document.cookie.user;
+})
+
+
+/*
+Вариант 1.
+Пользователь заходит первый раз
+- куки нет
+- локал нет
+
+
+*/
 
 watch(() => document.cookie.user, () => {
     user.value = document.cookie.user;
