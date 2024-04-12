@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-        <form action="https://mtrainer.khomike.ru/login" method="post">
+        <form action="" method="post" @onSubmit.prevent="(event)=>{prepairSubmit(event)}">
 
             <div class="form-item">
                 <div class="form-header">
@@ -95,6 +95,11 @@ import Inp       from "@/components/elements/Input.vue";
 import Msg         from "@/components/elements/Msg.vue";
 import { reactive, ref } from "vue";
 
+
+function prepairSubmit(event){
+    console.log(event.target);
+}
+
 // let user = {
 //   login: 'John',
 //   pass: 'Smith'
@@ -111,10 +116,6 @@ import { reactive, ref } from "vue";
 //   .then(result => console.log( result ); /* обрабатываем результат */);
 
 // }
-
-
-
-console.log( document.cookie );
 
 </script>
 
