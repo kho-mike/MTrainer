@@ -95,7 +95,7 @@ import { reactive, ref } from "vue";
 
 const userLogin = ref();
 
-onSubmit() {
+function onSubmit() {
     console.log(userLogin);
 }
 
