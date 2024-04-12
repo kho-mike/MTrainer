@@ -1,7 +1,6 @@
 <template>
     <div class="login">
         <form action="" method="post" @submit.prevent="onSubmit">
-
             <div class="form-item">
                 <div class="form-header">
                     <h2>Математический ренажер</h2>
@@ -11,8 +10,13 @@
 
             <div class="form-item">
                 <div class="form-input-box">
-                    <label for="login">Логин*: {{ userLogin.value }}</label>
-                    <Inp model="userLogin" type="text" name="login" placeholder="Логин" />
+                    <label for="login">Логин*:</label>
+                    <Inp
+                        v-model="login"
+                        type="text"
+                        name="login"
+                        placeholder="Логин"
+                    />
                 </div>
             </div>
             <div class="form-item">
@@ -24,7 +28,12 @@
 
             <div class="form-item">
                 <div class="form-checkbox">
-                    <input type="checkbox" class="inpit-checkbox" name="remember" id="remember">
+                    <input
+                        type="checkbox"
+                        class="inpit-checkbox"
+                        name="remember"
+                        id="remember"
+                    />
                     <label for="remember">Запомнить меня</label>
                 </div>
             </div>
@@ -32,23 +41,21 @@
             <div class="form-item">
                 <div class="form-button">
                     <Button
-                            type="submit"
-                            class="btn--max"
-                            id=""
-                            label="Войти"
+                        type="submit"
+                        class="btn--max"
+                        id=""
+                        label="Войти"
                     />
                 </div>
             </div>
 
             <div class="form-item">
                 <div class="form-separator">
-                    <span class="hr"><hr></span>
+                    <span class="hr"><hr /></span>
                     <span>или</span>
-                    <span class="hr"><hr></span>
+                    <span class="hr"><hr /></span>
                 </div>
             </div>
-
-
 
             <div class="form-item">
                 <div class="form-button">
@@ -59,44 +66,43 @@
                             id=""
                             label="Зарегистрироваться"
                         />
-                    </RouterLink>                    
+                    </RouterLink>
                 </div>
             </div>
 
             <div class="form-item">
                 <div class="form-separator">
-                    <span class="hr"><hr></span>
+                    <span class="hr"><hr /></span>
                 </div>
             </div>
-
-
 
             <div class="form-item">
                 <div class="form-button">
                     <RouterLink to="/home">
-                        <ButtonNav class="btn-nav-back" label="Назад" link="#" />
-                    </RouterLink>                    
+                        <ButtonNav
+                            class="btn-nav-back"
+                            label="Назад"
+                            link="#"
+                        />
+                    </RouterLink>
                 </div>
             </div>
-
-           
         </form>
     </div>
-    
 </template>
 
 <script setup>
-
-import Button      from "@/components/elements/Button.vue";
-import ButtonNav   from "@/components/elements/ButtonNav.vue";
-import Inp       from "@/components/elements/Input.vue";
-import Msg         from "@/components/elements/Msg.vue";
+import Button from "@/components/elements/Button.vue";
+import ButtonNav from "@/components/elements/ButtonNav.vue";
+import Inp from "@/components/elements/Input.vue";
+import Msg from "@/components/elements/Msg.vue";
 import { reactive, ref } from "vue";
 
-const userLogin = ref('');
+const login = ref("");
+const pass = ref("");
 
-function onSubmit() {
-    console.log(userLogin.value);
+function onSubmit(event) {
+    console.log(login.value);
 }
 
 // let user = {
@@ -115,75 +121,64 @@ function onSubmit() {
 //   .then(result => console.log( result ); /* обрабатываем результат */);
 
 // }
-
 </script>
 
 <style scoped>
-    .login {
+.login {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        min-height: 80vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+/************** form ***************/
 
-    /************** form ***************/
+label {
+    color: #8692a6;
+}
 
-    label {
-        color: #8692A6;
-    }
-    
-    form input:not([type=checkbox]) {
-        width: 20rem;
-    }
-    
-    .form-item {
-        margin: 0.5rem;
-    }
-    
-    .form-header {
-        margin-bottom: 1rem;
-    }
-    
-    .form-header p {
-        color: #8692A6;
-    }
-    
-    .form-header * {
-        margin: 0;
-        padding: 0;
-    }
-    
-    .form-input-box {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .form-checkbox {
-        display: flex;
-    }
-    
-    
-    
-    .form-button {
-    
-    }
-    
-    
-    .form-submit {
-        margin-top: 2rem;
-    
-    }
-    
-    .form-separator {
-        color: #8692A6;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .form-separator .hr {
-        flex-grow: 1;
-        padding: 0 5px;
-    }
+form input:not([type="checkbox"]) {
+    width: 20rem;
+}
 
+.form-item {
+    margin: 0.5rem;
+}
+
+.form-header {
+    margin-bottom: 1rem;
+}
+
+.form-header p {
+    color: #8692a6;
+}
+
+.form-header * {
+    margin: 0;
+    padding: 0;
+}
+
+.form-input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-checkbox {
+    display: flex;
+}
+
+.form-submit {
+    margin-top: 2rem;
+}
+
+.form-separator {
+    color: #8692a6;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-separator .hr {
+    flex-grow: 1;
+    padding: 0 5px;
+}
 </style>

@@ -1,9 +1,18 @@
 <template>
-    <input v-model="model" class="inp">
+    <input 
+    :value="modelValue" 
+    @input="$emit('update:modelValue', $event.target.value)"
+    class="inp" 
+    />
 </template>
 
 <script setup>
-    const model = defineModel()
+const props = defineProps({
+    modelValue: {
+        type: String,
+        required: true,
+    }
+});
 </script>
 
 <style scoped>
@@ -25,7 +34,6 @@
     overflow: hidden;
     user-select: none;
     -webkit-user-select: none;
-
 }
 
 .inp:hover {
@@ -56,5 +64,4 @@
 .inp--max {
     width: 100%;
 }
-
 </style>
