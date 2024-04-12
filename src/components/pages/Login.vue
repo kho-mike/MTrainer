@@ -11,7 +11,7 @@
 
             <div class="form-item">
                 <div class="form-input-box">
-                    <label for="login">Логин*</label>
+                    <label for="login">Логин*: {{ userLogin.value }}</label>
                     <Inp :value="userLogin" type="text" name="login" placeholder="Логин" />
                 </div>
             </div>
@@ -96,7 +96,7 @@ import { reactive, ref } from "vue";
 const userLogin = ref();
 
 function onSubmit() {
-    console.log(userLogin);
+    console.log(userLogin.value);
 }
 
 // let user = {
