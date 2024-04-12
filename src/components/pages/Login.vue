@@ -12,7 +12,7 @@
             <div class="form-item">
                 <div class="form-input-box">
                     <label for="login">Логин*: {{ userLogin.value }}</label>
-                    <Inp value="userLogin" type="text" name="login" placeholder="Логин" />
+                    <Inp value=userLogin type="text" name="login" placeholder="Логин" />
                 </div>
             </div>
             <div class="form-item">
