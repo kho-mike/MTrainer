@@ -87,15 +87,13 @@
 
 <script setup>
 
-console.log('This is Login page!');
-
 import Button      from "@/components/elements/Button.vue";
 import ButtonNav   from "@/components/elements/ButtonNav.vue";
 import Inp       from "@/components/elements/Input.vue";
 import Msg         from "@/components/elements/Msg.vue";
 import { reactive, ref } from "vue";
 
-const formLogin = ref();
+const formLogin = reactive();
 
 function prepairSubmit(event){
     console.log(formLogin);
