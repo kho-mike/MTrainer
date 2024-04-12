@@ -94,7 +94,7 @@ import Msg         from "@/components/elements/Msg.vue";
 import { reactive, ref } from "vue";
 
 function prepairSubmit(event){
-    console.log(login);
+    console.log(event);
 }
 
 // let user = {
