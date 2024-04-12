@@ -1,14 +1,9 @@
 <template>
-    <input :value="value" class="inp">
+    <input v-model="model" class="inp">
 </template>
 
 <script setup>
-    defineProps({
-    value: {
-        type: String,
-        required: true,
-    },
-});
+    const model = defineModel()
 </script>
 
 <style scoped>
