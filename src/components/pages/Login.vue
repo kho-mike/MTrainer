@@ -93,7 +93,7 @@ import Inp       from "@/components/elements/Input.vue";
 import Msg         from "@/components/elements/Msg.vue";
 import { reactive, ref } from "vue";
 
-const userLogin = ref();
+const userLogin = ref('');
 
 function onSubmit() {
     console.log(userLogin.value);
