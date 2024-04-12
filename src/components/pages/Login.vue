@@ -95,6 +95,7 @@ import Inp       from "@/components/elements/Input.vue";
 import Msg         from "@/components/elements/Msg.vue";
 import { reactive, ref } from "vue";
 
+const formLogin = ref();
 
 function prepairSubmit(event){
     console.log(formLogin);
