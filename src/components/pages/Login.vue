@@ -12,7 +12,8 @@
             <div class="form-item">
                 <div class="form-input-box">
                     <label for="login">Логин*: {{ userLogin.value }}</label>
-                    <Inp v-model="userLogin" type="text" name="login" placeholder="Логин" />
+                    <input v-model="userLogin">
+                    <Inp type="text" name="login" placeholder="Логин" />
                 </div>
             </div>
             <div class="form-item">
