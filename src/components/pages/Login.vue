@@ -12,7 +12,7 @@
             <div class="form-item">
                 <div class="form-input-box">
                     <label for="login">Логин*</label>
-                    <Inp v-model="formLogin" type="text" name="login" placeholder="Логин" />
+                    <Inp v-model="login" type="text" name="login" placeholder="Логин" />
                 </div>
             </div>
             <div class="form-item">
@@ -93,10 +93,8 @@ import Inp       from "@/components/elements/Input.vue";
 import Msg         from "@/components/elements/Msg.vue";
 import { reactive, ref } from "vue";
 
-const formLogin = reactive();
-
 function prepairSubmit(event){
-    console.log(formLogin);
+    console.log(login);
 }
 
 // let user = {
