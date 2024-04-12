@@ -97,8 +97,7 @@ import { reactive, ref } from "vue";
 
 
 function prepairSubmit(event){
-    console.log(event.name);
-    console.log(event.target);
+    console.log(event.target.name);
 }
 
 // let user = {
