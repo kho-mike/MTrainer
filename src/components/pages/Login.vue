@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-        <form action="" method="post" @submit.prevent="(event)=>{prepairSubmit(event)}">
+        <form action="" method="post" @submit.prevent="onSubmit">
 
             <div class="form-item">
                 <div class="form-header">
@@ -12,7 +12,7 @@
             <div class="form-item">
                 <div class="form-input-box">
                     <label for="login">Логин*</label>
-                    <Inp v-model="login" type="text" name="login" placeholder="Логин" />
+                    <Inp :value="userLogin" type="text" name="login" placeholder="Логин" />
                 </div>
             </div>
             <div class="form-item">
@@ -93,8 +93,10 @@ import Inp       from "@/components/elements/Input.vue";
 import Msg         from "@/components/elements/Msg.vue";
 import { reactive, ref } from "vue";
 
-function prepairSubmit(event){
-    console.log(event.target[0]);
+const userLogin = ref();
+
+onSubmit() {
+    console.log(userLogin);
 }
 
 // let user = {
