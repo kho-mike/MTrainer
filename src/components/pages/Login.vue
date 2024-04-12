@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-        <form action="" method="post" @submit.prevent="onSubmit">
+        <form action="https://mtrainer.khomike.ru/login" method="post" @submit="onSubmit">
             <div class="form-item">
                 <div class="form-header">
                     <h2>Математический ренажер</h2>
@@ -22,13 +22,14 @@
             <div class="form-item">
                 <div class="form-input-box">
                     <label for="pass">Пароль*</label>
-                    <Inp type="password" name="pass" placeholder="Пароль" />
+                    <Inp v-model="pass" type="password" name="pass" placeholder="Пароль" />
                 </div>
             </div>
 
             <div class="form-item">
                 <div class="form-checkbox">
                     <input
+                        v-model="remember"
                         type="checkbox"
                         class="inpit-checkbox"
                         name="remember"
@@ -48,43 +49,10 @@
                     />
                 </div>
             </div>
-
-            <div class="form-item">
-                <div class="form-separator">
-                    <span class="hr"><hr /></span>
-                    <span>или</span>
-                    <span class="hr"><hr /></span>
-                </div>
-            </div>
-
-            <div class="form-item">
+            <div class="form-item" style="text-align: center;">
+                <RouterLink to="/reg"></RouterLink>
                 <div class="form-button">
-                    <RouterLink to="/reg">
-                        <Button
-                            type="button"
-                            class="btn--max"
-                            id=""
-                            label="Зарегистрироваться"
-                        />
-                    </RouterLink>
-                </div>
-            </div>
-
-            <div class="form-item">
-                <div class="form-separator">
-                    <span class="hr"><hr /></span>
-                </div>
-            </div>
-
-            <div class="form-item">
-                <div class="form-button">
-                    <RouterLink to="/home">
-                        <ButtonNav
-                            class="btn-nav-back"
-                            label="Назад"
-                            link="#"
-                        />
-                    </RouterLink>
+                    если нет аккаунта - <RouterLink to="/reg">зарегистрироваться</RouterLink>
                 </div>
             </div>
         </form>
@@ -100,27 +68,23 @@ import { reactive, ref } from "vue";
 
 const login = ref("");
 const pass = ref("");
+const remember = ref(false);
 
 function onSubmit(event) {
-    console.log(login.value);
-}
-
-// let user = {
-//   login: 'John',
-//   pass: 'Smith'
-// };
-
-// function onSubmit(event) {
 //     fetch('https://mtrainer.khomike.ru/login', {
 //   method: 'POST',
 //   headers: {
 //     'Content-Type': 'application/json;charset=utf-8'
 //   },
-//   body: JSON.stringify(user))
+//   body: JSON.stringify({
+//     login: login.value,
+//     pass: pass.value,
+//     remember: remember.value,
+//   })})
 //   .then(response => response.json())
-//   .then(result => console.log( result ); /* обрабатываем результат */);
-
-// }
+//   .then(result => console.log( result ) /* обрабатываем результат */);
+ 
+}   
 </script>
 
 <style scoped>

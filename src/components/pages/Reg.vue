@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-        <form action="https://mtrainer.khomike.ru/reg" method="post">
+        <form action="https://mtrainer.khomike.ru/reg" method="post" @submit="onSubmit">
 
             <div class="form-item">
                 <div class="form-header">
@@ -12,19 +12,19 @@
             <div class="form-item">
                 <div class="form-input-box">
                     <label for="login">Логин*</label>
-                    <Inp type="text" name="login" placeholder="Логин" />
+                    <Inp v-model="login" type="text" name="login" placeholder="Логин" />
                 </div>
             </div>
             <div class="form-item">
                 <div class="form-input-box">
                     <label for="pass">Пароль*</label>
-                    <Inp type="password" name="pass" placeholder="Пароль" />
+                    <Inp v-model="pass" type="password" name="pass" placeholder="Пароль" />
                 </div>
             </div>
             <div class="form-item">
                 <div class="form-input-box">
                     <label for="passRepeat">Повтор пароля*</label>
-                    <Inp type="password" name="passRepeat" placeholder="Повтор пароля" />
+                    <Inp v-model="passRepeat" type="password" name="passRepeat" placeholder="Повтор пароля" />
                 </div>
             </div>
 
@@ -32,6 +32,7 @@
                 <div class="form-button">
                     <a href="#">
                         <Button
+                            :disabled="isPassMatch"
                             type="submit"
                             class="btn--max"
                             id=""
@@ -42,20 +43,9 @@
                 </div>
             </div>
 
-
-            <div class="form-item">
-                <div class="form-separator">
-                    <span class="hr"><hr></span>
-                </div>
-            </div>
-
-
-
-            <div class="form-item">
+            <div class="form-item" style="text-align: center;">
                 <div class="form-button">
-                    <RouterLink to="/login">
-                        <ButtonNav class="btn-nav-back" label="Назад" link="#" />
-                    </RouterLink>
+                    если уже есть аккаунт - <RouterLink to="/login">войти</RouterLink>
                     
                 </div>
             </div>
@@ -73,7 +63,31 @@ import Button      from "@/components/elements/Button.vue";
 import ButtonNav   from "@/components/elements/ButtonNav.vue";
 import Inp       from "@/components/elements/Input.vue";
 import Msg         from "@/components/elements/Msg.vue";
-import { reactive, ref } from "vue";
+import { reactive, ref, computed } from "vue";
+
+const login = ref("");
+const pass = ref("");
+const passRepeat = ref("");
+const remember = ref(false);
+
+const isPassMatch = computed(() => !login.value || !pass.value || pass.value !== passRepeat.value);
+
+function onSubmit(event) {
+//     fetch('https://mtrainer.khomike.ru/login', {
+//   method: 'POST',
+//   headers: {
+//     'Content-Type': 'application/json;charset=utf-8'
+//   },
+//   body: JSON.stringify({
+//     login: login.value,
+//     pass: pass.value,
+//     remember: remember.value,
+//   })})
+//   .then(response => response.json())
+//   .then(result => console.log( result ) /* обрабатываем результат */);
+ 
+}  
+
 
 </script>
 
