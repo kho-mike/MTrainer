@@ -1,9 +1,14 @@
 <template>
-    <input class="inp">
+    <input :value="value" class="inp">
 </template>
 
 <script setup>
-
+    defineProps({
+    value: {
+        type: String,
+        required: true,
+    },
+});
 </script>
 
 <style scoped>
