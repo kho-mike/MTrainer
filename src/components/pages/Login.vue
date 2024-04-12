@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-        <form action="" method="post" @onSubmit.prevent="(event)=>{prepairSubmit(event)}">
+        <form action="" method="post" @submit.prevent="(event)=>{prepairSubmit(event)}">
 
             <div class="form-item">
                 <div class="form-header">
