@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-        <form action="https://mtrainer.khomike.ru/login" method="post" @submit="onSubmit">
+        <form action="https://mtrainer.khomike.ru/login" method="post" @submit.prevent="onSubmit">
             <div class="form-item">
                 <div class="form-header">
                     <h2>Математический ренажер</h2>
@@ -66,24 +66,15 @@ import Inp from "@/components/elements/Input.vue";
 import Msg from "@/components/elements/Msg.vue";
 import { reactive, ref } from "vue";
 
+import { useAuthStore } from "@/stores";
+const authStore = useAuthStore();
+
 const login = ref("");
 const pass = ref("");
 const remember = ref(false);
 
-function onSubmit(event) {
-//     fetch('https://mtrainer.khomike.ru/login', {
-//   method: 'POST',
-//   headers: {
-//     'Content-Type': 'application/json;charset=utf-8'
-//   },
-//   body: JSON.stringify({
-//     login: login.value,
-//     pass: pass.value,
-//     remember: remember.value,
-//   })})
-//   .then(response => response.json())
-//   .then(result => console.log( result ) /* обрабатываем результат */);
- 
+function onSubmit(form) {
+    localStorage.getItem('userToken', authStore.login(login.value, pass.value)); 
 }   
 </script>
 

@@ -55,6 +55,9 @@ import { RouterLink, RouterView } from "vue-router";
 import { computed, reactive, ref, watch } from "vue";
 import Button from "@/components/elements/Button.vue";
 import ButtonNav from "@/components/elements/ButtonNav.vue";
+import { useAuthStore } from "@/stores";
+
+const authStore = useAuthStore();
 
 
 // localStorage.setItem('myVar', 'Is my var'); // добавляем элемент в localstorage

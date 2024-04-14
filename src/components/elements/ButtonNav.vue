@@ -6,11 +6,9 @@ defineProps({
     },
     link: {
         type: String,
-        required: true,
     },
     class: {
         type: String,
-        required: true,
     },
 });
 </script>
