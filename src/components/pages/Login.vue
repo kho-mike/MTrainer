@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-        <form action="https://mtrainer.khomike.ru/login" method="post" @submit.prevent="onSubmit">
+        <form action="https://mtrainer.khomike.ru/login" method="post" @submit="onSubmit">
             <div class="form-item">
                 <div class="form-header">
                     <h2>Математический ренажер</h2>
@@ -74,7 +74,7 @@ const pass = ref("");
 const remember = ref(false);
 
 function onSubmit(form) {
-    localStorage.getItem('userToken', authStore.login(login.value, pass.value)); 
+    //localStorage.getItem('userToken', authStore.login(login.value, pass.value)); 
 }   
 </script>
 
