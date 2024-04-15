@@ -16,13 +16,12 @@ export const useAuthStore = defineStore({
             const url = `https://mtrainer.khomike.ru/login`;
             const requestOptions = {
                 method: "POST",
-                body: JSON.stringify( {
-                    login: 'login',
-                    pass: 'pass',
+                body: JSON.stringify({
+                    login: login,
+                    pass: pass,
                 }),
-                mode: 'no-cors',
                 headers: {
-                    'Content-type': 'application/x-www-form-urlencoded',  //'application/json; charset=UTF-8',
+                    'Content-type': 'application/json; charset=UTF-8',
                 }, 
             };
 
