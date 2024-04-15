@@ -23,7 +23,7 @@ export const useAuthStore = defineStore({
                 body: 'qwqwqw',
                 mode: 'no-cors',
                 headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
+                    //'Content-type': 'application/json; charset=UTF-8',
                 }, // authHeader(url),
                 // referrer: "",
                 // redirect: 'follow',
