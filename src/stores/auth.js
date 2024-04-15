@@ -14,10 +14,6 @@ export const useAuthStore = defineStore({
             console.log(login, pass);
 
             const url = `https://mtrainer.khomike.ru/login`;
-            const body = {
-                login: login,
-                pass: pass,
-            }
             const requestOptions = {
                 method: "POST",
                 body: JSON.stringify({
