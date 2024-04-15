@@ -39,11 +39,11 @@ export const useAuthStore = defineStore({
 
             return fetch(url, requestOptions).then((response) => {
                 console.log('this is then in fetch function');
+                console.log(response);
 
 
                 return response.text().then(text => {
                     console.log('this is then in then in fetch function');
-                    console.log(text);
 
                     const data = JSON.parse(text);
             
