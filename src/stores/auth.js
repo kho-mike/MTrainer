@@ -20,10 +20,10 @@ export const useAuthStore = defineStore({
             }
             const requestOptions = {
                 method: "POST",
-                body: JSON.stringify({
+                body: {
                     login: login,
                     pass: pass,
-                }),
+                },
                 mode: 'no-cors',
                 headers: {
                     'Content-type': 'application/json; charset=UTF-8',
