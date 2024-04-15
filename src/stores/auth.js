@@ -26,7 +26,7 @@ export const useAuthStore = defineStore({
                 }),
                 mode: 'no-cors',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-type': 'application/json; charset=UTF-8',
                 }, // authHeader(url),
                 // referrer: "",
                 // redirect: 'follow',
