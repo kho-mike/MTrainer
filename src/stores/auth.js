@@ -10,24 +10,23 @@ export const useAuthStore = defineStore({
     }),
     actions: {
         async login(login, pass) {
-            console.log('this is useAuthStore');
-            console.log(login, pass);
-
             const url = `https://mtrainer.khomike.ru/login`;
+            const body = JSON.stringify({
+                login: login,
+                pass: pass,
+                remember: remember,
+            });
             const requestOptions = {
                 method: "POST",
-                mode: "no-cors",
-                body:  `login=${login}&pass=${pass}`,
+                body:  body,
                 headers: {
-                    'Content-type': "application/x-www-form-urlencoded; charset=UTF-8",
+                    'Content-type': 'application/json;charset=utf-8',
                 }, 
             };
 
-            return fetch(url, requestOptions).then((response) => {
-                return response.json( ) 
-            }).then((data) => {
-                this.user = data;
-            });
+            return fetch(url, requestOptions)
+                .then(response => response.json())
+                .then(result => console.log(result) /* обрабатываем результат */);
             
         },
         logout() {

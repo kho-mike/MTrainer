@@ -74,24 +74,7 @@ const pass = ref("");
 const remember = ref(false);
 
 function onSubmit(form) {
-    // localStorage.getItem('userToken', authStore.login(login.value, pass.value)); 
-
-    fetch('https://mtrainer.khomike.ru/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json;charset=utf-8'
-        },
-        body: JSON.stringify({
-            login: login.value,
-            pass: pass.value,
-            remember: remember.value,
-        })
-    }).then(response => response.json())
-        .then(result => console.log( result ) /* обрабатываем результат */);
-
-
-
-
+    authStore.login(login.value, pass.value, remember.value); 
 }   
 </script>
 
