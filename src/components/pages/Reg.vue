@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-        <form action="https://mtrainer.khomike.ru/reg" method="post" @submit="onSubmit">
+        <form action="https://mtrainer.khomike.ru/reg" method="post" @submit.prevent="onSubmit">
 
             <div class="form-item">
                 <div class="form-header">
@@ -65,27 +65,17 @@ import Inp       from "@/components/elements/Input.vue";
 import Msg         from "@/components/elements/Msg.vue";
 import { reactive, ref, computed } from "vue";
 
+import { useAuthStore } from "@/stores";
+const authStore = useAuthStore();
+
 const login = ref("");
 const pass = ref("");
 const passRepeat = ref("");
-const remember = ref(false);
 
 const isPassMatch = computed(() => !login.value || !pass.value || pass.value !== passRepeat.value);
 
-function onSubmit(event) {
-//     fetch('https://mtrainer.khomike.ru/login', {
-//   method: 'POST',
-//   headers: {
-//     'Content-Type': 'application/json;charset=utf-8'
-//   },
-//   body: JSON.stringify({
-//     login: login.value,
-//     pass: pass.value,
-//     remember: remember.value,
-//   })})
-//   .then(response => response.json())
-//   .then(result => console.log( result ) /* обрабатываем результат */);
- 
+function onSubmit(form) {
+    authStore.reg(login.value, pass.value); 
 }  
 
 

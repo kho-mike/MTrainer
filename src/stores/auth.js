@@ -9,6 +9,31 @@ export const useAuthStore = defineStore({
         returnUrl: null,
     }),
     actions: {
+        async reg(login, pass) {
+            const url = `https://mtrainer.khomike.ru/reg`;
+            const body = JSON.stringify({
+                login: login,
+                pass: pass,
+            });
+            const requestOptions = {
+                method: "POST",
+                body:  body,
+                headers: {
+                    'Content-type': 'application/json;charset=utf-8',
+                }, 
+            };
+
+            return fetch(url, requestOptions)
+                .then(response => response.json())
+                .then((result) => {
+                    this.user = result;
+                    // localStorage.setItem('user', JSON.stringify( result) );
+                    console.log(this.user);
+                    console.log(localStorage);
+                });
+            
+        },
+
         async login(login, pass) {
             const url = `https://mtrainer.khomike.ru/login`;
             const body = JSON.stringify({
@@ -26,7 +51,12 @@ export const useAuthStore = defineStore({
 
             return fetch(url, requestOptions)
                 .then(response => response.json())
-                .then(result => console.log(result) /* обрабатываем результат */);
+                .then((result) => {
+                    this.user = result;
+                    // localStorage.setItem('user', JSON.stringify( result) );
+                    console.log(this.user);
+                    console.log(localStorage);
+                });
             
         },
         logout() {
