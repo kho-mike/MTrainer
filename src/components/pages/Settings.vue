@@ -82,8 +82,10 @@ console.log('This is Exercise page!');
 import Button       from "@/components/elements/Button.vue";
 import ButtonNav    from "@/components/elements/ButtonNav.vue";
 import Msg          from "@/components/elements/Msg.vue";
-import { SITE_URL } from "@/config";
+import { useConstsStore } from "@/stores";
 import { reactive, ref } from "vue";
+
+const consts = useConstsStore();
 
 const login = ref("");
 const name = ref("");
