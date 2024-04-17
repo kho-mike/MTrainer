@@ -42,7 +42,8 @@
                             type="button"
                             class="btn--medium"
                             id=""
-                            label="Изменить"
+                            @click="toChangePass"
+                            :label="labelBtnToChangePass"
                         />
                         <Inp v-model="pass" type="password" name="pass" placeholder="Пароль" />
                     </div>
@@ -50,13 +51,7 @@
 
                 <div v-if="needToChangePass" class="form-item">
                     <div class="form-input-box">
-                        <label for="passRepeat">Повтор пароля*</label><Button
-                            type="button"
-                            class="btn--medium"
-                            id=""
-                            @click="toChangePass"
-                            :label="labelBtnToChangePass"
-                        />
+                        <label for="passRepeat">Повтор пароля*</label>
                         <Inp v-model="passRepeat" type="password" name="passRepeat" placeholder="Повтор пароля" />
                     </div>
                 </div>
@@ -99,9 +94,11 @@ const needToChangePass = ref(false);
 function toChangePass(){
     //
     if (needToChangePass) {
+        console.log("needToChangePass = ref(false);");
         needToChangePass = true;
         labelBtnToChangePass = ref("Оставить");
     } else {
+        console.log("needToChangePass != ref(false);");
         needToChangePass = false;
         labelBtnToChangePass = ref("Изменить");
     }
