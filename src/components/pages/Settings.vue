@@ -54,6 +54,7 @@
                             type="button"
                             class="btn--medium"
                             id=""
+                            @click="toChangePass"
                             :label="labelBtnToChangePass"
                         />
                         <Inp v-model="passRepeat" type="password" name="passRepeat" placeholder="Повтор пароля" />
@@ -97,13 +98,14 @@ const needToChangePass = ref(false);
 
 function toChangePass(){
     //
-    needToChangePass = true;
-    labelBtnToChangePass = ref("Оставить");
-};
-function dontChangePass(){
-    //
-    needToChangePass = false;
-    labelBtnToChangePass = ref("Изменить");
+    if (needToChangePass) {
+        needToChangePass = true;
+        labelBtnToChangePass = ref("Оставить");
+    } else {
+        needToChangePass = false;
+        labelBtnToChangePass = ref("Изменить");
+    }
+   
 };
 
 
