@@ -38,7 +38,8 @@
 
                 <div class="form-item">
                     <div class="form-input-box">
-                        <label for="pass">Пароль*</label><Button
+                        <label for="pass">Пароль*</label>
+                        <Button
                             type="button"
                             class="btn--medium"
                             id=""
@@ -95,12 +96,12 @@ function toChangePass(){
     //
     if (needToChangePass) {
         console.log("needToChangePass = ref(false);");
-        needToChangePass = true;
-        labelBtnToChangePass = ref("Оставить");
+        needToChangePass.value = true;
+        labelBtnToChangePass.value = ref("Оставить");
     } else {
         console.log("needToChangePass != ref(false);");
-        needToChangePass = false;
-        labelBtnToChangePass = ref("Изменить");
+        needToChangePass.value = false;
+        labelBtnToChangePass.value = ref("Изменить");
     }
    
 };
