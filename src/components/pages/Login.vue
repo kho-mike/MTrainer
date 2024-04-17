@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-        <form action="https://mtrainer.khomike.ru/login" method="post" @submit.prevent="onSubmit">
+        <form action="" method="post" @submit.prevent="onSubmit">
             <div class="form-item">
                 <div class="form-header">
                     <h2>Математический ренажер</h2>
@@ -66,15 +66,15 @@ import Inp from "@/components/elements/Input.vue";
 import Msg from "@/components/elements/Msg.vue";
 import { reactive, ref } from "vue";
 
-import { useAuthStore } from "@/stores";
-const authStore = useAuthStore();
+import { useUserStore } from "@/stores";
+const userStore = useUserStore();
 
 const login = ref("");
 const pass = ref("");
 const remember = ref(false);
 
 function onSubmit(form) {
-    authStore.login(login.value, pass.value, remember.value); 
+    console.log(userStore.login(login.value, pass.value)); 
 }   
 </script>
 

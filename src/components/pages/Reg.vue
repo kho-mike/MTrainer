@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-        <form action="https://mtrainer.khomike.ru/reg" method="post" @submit.prevent="onSubmit">
+        <form action="" method="post" @submit.prevent="onSubmit">
 
             <div class="form-item">
                 <div class="form-header">
@@ -57,16 +57,14 @@
 
 <script setup>
 
-console.log('This is Reg page!');
-
 import Button      from "@/components/elements/Button.vue";
 import ButtonNav   from "@/components/elements/ButtonNav.vue";
 import Inp       from "@/components/elements/Input.vue";
 import Msg         from "@/components/elements/Msg.vue";
 import { reactive, ref, computed } from "vue";
 
-import { useAuthStore } from "@/stores";
-const authStore = useAuthStore();
+import { useUserStore } from "@/stores";
+const userStore = useUserStore();
 
 const login = ref("");
 const pass = ref("");
@@ -75,7 +73,7 @@ const passRepeat = ref("");
 const isPassMatch = computed(() => !login.value || !pass.value || pass.value !== passRepeat.value);
 
 function onSubmit(form) {
-    authStore.reg(login.value, pass.value); 
+    console.log(userStore.reg(login.value, pass.value));
 }  
 
 
@@ -124,12 +122,6 @@ function onSubmit(form) {
     
     .form-checkbox {
         display: flex;
-    }
-    
-    
-    
-    .form-button {
-    
     }
     
     

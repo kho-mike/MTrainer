@@ -80,10 +80,11 @@ import Button       from "@/components/elements/Button.vue";
 import ButtonNav    from "@/components/elements/ButtonNav.vue";
 import Msg          from "@/components/elements/Msg.vue";
 import Inp          from "@/components/elements/Input.vue";
-import { useConstsStore } from "@/stores";
+
 import { reactive, ref } from "vue";
 
-const consts = useConstsStore();
+import { useUserStore } from "@/stores";
+const userStore = useUserStore();
 
 const login = ref("");
 const name = ref("");
@@ -95,14 +96,16 @@ const needToChangePass = ref(false);
 function toChangePass(){
     //
     if (needToChangePass) {
-        console.log("needToChangePass = ref(false);");
-        needToChangePass.value = true;
-        labelBtnToChangePass.value = ref("Оставить");
-    } else {
-        console.log("needToChangePass != ref(false);");
-        needToChangePass.value = false;
-        labelBtnToChangePass.value = ref("Изменить");
+        needToChangePass = true;
+        labelBtnToChangePass = "Оставить";
     }
+    if(!needToChangePass) {
+        needToChangePass.value = false;
+        labelBtnToChangePass.value = "Изменить";
+    }
+    console.log(needToChangePass);
+    console.log(labelBtnToChangePass);
+
    
 };
 

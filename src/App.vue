@@ -11,10 +11,10 @@
                 /></RouterLink>
             </div>
         </div>
-        <div v-if="!authStore.user" class="header-center">
+        <div v-if="!userStore.user" class="header-center">
         </div>
         <div class="header-end">
-            <div v-if="authStore.user" class="userBar">
+            <div v-if="userStore.user" class="userBar">
                 <div class="userBar-btn header-item">
                     <div class="userBar-btn-avatar">
                         <div class="avatar-box">
@@ -34,7 +34,7 @@
                 </div>
             </div>
 
-            <div v-if="!authStore.user" class="userBar asdsa">
+            <div v-if="!userStore.user" class="userBar asdsa">
                 <div class="guestBar-menu header-item">
                     <RouterLink to="/login"><Button class="btn--medium" label="Войти"/></RouterLink>
                 </div>
@@ -54,11 +54,12 @@ import { RouterLink, RouterView } from "vue-router";
 import { computed, reactive, ref, watch } from "vue";
 import Button from "@/components/elements/Button.vue";
 import ButtonNav from "@/components/elements/ButtonNav.vue";
-import { useAuthStore } from "@/stores";
-const authStore = useAuthStore();
+import { useUserStore } from "@/stores";
+const userStore = useUserStore();
 
 function logout() {
-    authStore.logout();
+    const userStore = useUserStore();
+    userStore.logout();
 }
 
 </script>
