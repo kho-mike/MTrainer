@@ -82,7 +82,7 @@ console.log('This is Exercise page!');
 import Button       from "@/components/elements/Button.vue";
 import ButtonNav    from "@/components/elements/ButtonNav.vue";
 import Msg          from "@/components/elements/Msg.vue";
-import Inp          from "@/components/elements/Inp.vue";
+import Inp          from "@/components/elements/Input.vue";
 import { useConstsStore } from "@/stores";
 import { reactive, ref } from "vue";
 
