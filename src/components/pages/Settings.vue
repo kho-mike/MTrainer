@@ -23,23 +23,40 @@
                         />
                     </div>
                 </div>
+
                 <div class="form-item">
                     <div class="form-input-box">
-                        <label for="pass">Пароль*</label>
-                        <Inp v-model="pass" type="password" name="pass" placeholder="Пароль" />
+                        <label for="login">Имя*:</label>
+                        <Inp
+                            v-model="login"
+                            type="text"
+                            name="login"
+                            placeholder="Логин"
+                        />
                     </div>
                 </div>
 
                 <div class="form-item">
-                    <div class="form-checkbox">
-                        <input
-                            v-model="remember"
-                            type="checkbox"
-                            class="inpit-checkbox"
-                            name="remember"
-                            id="remember"
+                    <div class="form-input-box">
+                        <label for="pass">Пароль*</label><Button
+                            type="button"
+                            class="btn--medium"
+                            id=""
+                            label="Изменить"
                         />
-                        <label for="remember">Запомнить меня</label>
+                        <Inp v-model="pass" type="password" name="pass" placeholder="Пароль" />
+                    </div>
+                </div>
+
+                <div v-if="needToChangePass" class="form-item">
+                    <div class="form-input-box">
+                        <label for="passRepeat">Повтор пароля*</label><Button
+                            type="button"
+                            class="btn--medium"
+                            id=""
+                            :label="labelBtnToChangePass"
+                        />
+                        <Inp v-model="passRepeat" type="password" name="passRepeat" placeholder="Повтор пароля" />
                     </div>
                 </div>
 
@@ -67,6 +84,24 @@ import ButtonNav    from "@/components/elements/ButtonNav.vue";
 import Msg          from "@/components/elements/Msg.vue";
 import { SITE_URL } from "@/config";
 import { reactive, ref } from "vue";
+
+const login = ref("");
+const pass = ref("");
+const passRepeat = ref("");
+const labelBtnToChangePass = ref("Изменить");
+const needToChangePass = ref(false);
+
+function toChangePass(){
+    //
+    needToChangePass = true;
+    labelBtnToChangePass = ref("Оставить");
+};
+function dontChangePass(){
+    //
+    needToChangePass = false;
+    labelBtnToChangePass = ref("Изменить");
+};
+
 
 </script>
 
