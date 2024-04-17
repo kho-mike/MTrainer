@@ -53,6 +53,7 @@ export const useAuthStore = defineStore({
                 .then(response => response.json())
                 .then((result) => {
                     localStorage.setItem('user', JSON.stringify( result) );
+                    this.state();
                     console.log(this.user);
                     console.log(localStorage);
                 });
