@@ -3,7 +3,7 @@ import Exercise   from '@/components/pages/Exercise.vue';
 import Test       from '@/components/pages/Test.vue';
 import Login      from '@/components/pages/Login.vue';
 import Reg      from '@/components/pages/Reg.vue';
-import Settings      from '@/components/pages';
+import Settings      from '@/components/pages/Settings.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
