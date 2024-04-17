@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class=settings-content>
-            <form action=`${SITE_URL}login` method="post">
+            <form action="" method="post">
 
 
                 <div class="form-item">
