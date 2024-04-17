@@ -8,7 +8,6 @@
                 <RouterLink to="/"><Button
                     class="btn--medium btn-toMain"
                     label="To Main"
-                    link="#"
                 /></RouterLink>
             </div>
         </div>
@@ -30,14 +29,14 @@
                     <div class="userBar-btn-title btn--medium">UserName</div>
                 </div>
                 <div class="userBar-menu header-item">
-                    <ButtonNav  @click="logout" class="btn-nav-back" label="Выход" link="#" />
-                    <Button class="btn--medium" label="Настройки" link="#" />
+                    <ButtonNav  @click="logout" class="btn-nav-back" label="Выход"/>
+                    <RouterLink to="/settings"><Button class="btn--medium" label="Настройки"/></RouterLink>
                 </div>
             </div>
 
             <div v-if="!authStore.user" class="userBar asdsa">
                 <div class="guestBar-menu header-item">
-                    <RouterLink to="/login"><Button class="btn--medium" label="Войти" link="#" /></RouterLink>
+                    <RouterLink to="/login"><Button class="btn--medium" label="Войти"/></RouterLink>
                 </div>
             </div>
 
