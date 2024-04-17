@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class=settings-content>
-            <form action=`${SITE_URL}login` method="post" @submit.prevent="onSubmit">
+            <form action=`${SITE_URL}login` method="post">
 
 
                 <div class="form-item">
@@ -26,12 +26,12 @@
 
                 <div class="form-item">
                     <div class="form-input-box">
-                        <label for="login">Имя*:</label>
+                        <label for="name">Имя*:</label>
                         <Inp
-                            v-model="login"
+                            v-model="name"
                             type="text"
-                            name="login"
-                            placeholder="Логин"
+                            name="name"
+                            placeholder="Имя"
                         />
                     </div>
                 </div>
@@ -86,6 +86,7 @@ import { SITE_URL } from "@/config";
 import { reactive, ref } from "vue";
 
 const login = ref("");
+const name = ref("");
 const pass = ref("");
 const passRepeat = ref("");
 const labelBtnToChangePass = ref("Изменить");
