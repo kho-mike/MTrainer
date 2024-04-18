@@ -74,13 +74,16 @@ const pass = ref("");
 const remember = ref(false);
 
 function onSubmit(form) {
-    const result = userStore.login(login.value, pass.value).then( ()=> console.log('then fron onSubmit') );
+    const result = userStore.login(login.value, pass.value).then( ()=> clearForm() );
+    console.log('result:');
+    console.log(result); 
+};
+
+function clearForm(){
     login.value = '';
     pass.value = '';
     remember.value = '';
-    console.log('result:');
-    console.log(result); 
-}   
+}
 </script>
 
 <style scoped>
