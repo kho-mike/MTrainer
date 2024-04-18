@@ -12,7 +12,7 @@
                                 <a href="#">
                                     <div class="list-categories__rank">RANK</div>
                                     <div class="list-categories__icon">
-                                        <img src="@/src/assets/img/multiply2.png" height="120" alt="Умножение на 2">
+                                        <img src="../../src/assets/img/multiply2.png" height="120" alt="Умножение на 2">
                                     </div>
                                     <div class="list-categories__title">УМНОЖЕНИЕ НА 2</div>
                                 </a>
@@ -21,7 +21,7 @@
                                 <a href="#">
                                     <div class="list-categories__rank">RANK</div>
                                     <div class="list-categories__icon">
-                                        <img src="@/src/assets/img/multiply3.png" height="120" alt="Умножение на 3">
+                                        <img src="../../src/assets/img/multiply3.png" height="120" alt="Умножение на 3">
                                     </div>
                                     <div class="list-categories__title">УМНОЖЕНИЕ НА 3</div>
                                 </a>
@@ -30,7 +30,7 @@
                                 <a href="#">
                                     <div class="list-categories__rank">RANK</div>
                                     <div class="list-categories__icon">
-                                        <img src="@/src/assets/img/multiply4.png" height="120" alt="Умножение на 4">
+                                        <img src="../../src/assets/img/multiply4.png" height="120" alt="Умножение на 4">
                                     </div>
                                     <div class="list-categories__title">УМНОЖЕНИЕ НА 4</div>
                                 </a>
@@ -39,7 +39,7 @@
                                 <a href="#">
                                     <div class="list-categories__rank">RANK</div>
                                     <div class="list-categories__icon">
-                                        <img src="@/src/assets/img/multiply5.png" height="120" alt="Умножение на 5">
+                                        <img src="../../src/assets/img/multiply5.png" height="120" alt="Умножение на 5">
                                     </div>
                                     <div class="list-categories__title">УМНОЖЕНИЕ НА 5</div>
                                 </a>
@@ -48,7 +48,7 @@
                                 <a href="#">
                                     <div class="list-categories__rank">RANK</div>
                                     <div class="list-categories__icon">
-                                        <img src="@/src/assets/img/multiply6.png" height="120" alt="Умножение на 6">
+                                        <img src="../../src/assets/img/multiply6.png" height="120" alt="Умножение на 6">
                                     </div>
                                     <div class="list-categories__title">УМНОЖЕНИЕ НА 6</div>
                                 </a>
