@@ -1,6 +1,7 @@
 import { ref, computed, watch } from "vue";
 import { defineStore } from "pinia";
 import { useConfigStore } from "./useConfigStore";
+import { router } from "@/router";
 
 export const useUserStore = defineStore("userStore", () => {
     const user = ref(JSON.parse(localStorage.getItem("user")));
@@ -24,6 +25,7 @@ export const useUserStore = defineStore("userStore", () => {
             .then((response) => response.json())
             .then((result) => {
                 user.value = result;
+                router.push({ name: 'home' });
 
             });
     };
@@ -47,6 +49,7 @@ export const useUserStore = defineStore("userStore", () => {
             .then((response) => response.json())
             .then((result) => {
                 user.value = result;
+                router.push({ name: 'home' });
 
             });
     };
