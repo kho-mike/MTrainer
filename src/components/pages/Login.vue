@@ -74,7 +74,7 @@ const pass = ref("");
 const remember = ref(false);
 
 function onSubmit(form) {
-    const result = userStore.login(login.value, pass.value);
+    const result = userStore.login(login.value, pass.value).then( ()=> console.log('then fron onSubmit') );
     console.log('result:');
     console.log(result); 
 }   
