@@ -2,7 +2,7 @@
     <div class="profile">
                 <div class="profile-header">
                     <div class="profile-header-avatar">
-                        <img src="./src/assets/img/avatar.jpg" height="150rem" class="img-avatar--medium" alt="avatar">
+                        <img src="@/assets/img/avatar.jpg" height="150rem" class="img-avatar--medium" alt="avatar">
                     </div>
                     <div class="profile-header-info">
                         <div class="info-title">ХОЗЯИНОВ МИХАИЛ</div>
@@ -11,7 +11,7 @@
                         <div class="info-statistic">
                             <div class="info-statistic-item">
                                 <div class="info-statistic-icon">
-                                    <img src="./src/assets/icons/flag.png" width="25rem" alt="medal">
+                                    <img src="@/assets/icons/flag.png" width="25rem" alt="medal">
                                 </div>
                                 <div class="info-statistic-box">
                                     <div class="statistic-box__value">27</div>
@@ -20,7 +20,7 @@
                             </div>
                             <div class="info-statistic-item">
                                 <div class="info-statistic-icon">
-                                    <img src="./src/assets/icons/time.png" width="25rem" alt="medal">
+                                    <img src="@/assets/icons/time.png" width="25rem" alt="medal">
                                 </div>
                                 <div class="info-statistic-box">
                                     <div class="statistic-box__value">35 мин</div>
@@ -29,7 +29,7 @@
                             </div>
                             <div class="info-statistic-item">
                                 <div class="info-statistic-icon">
-                                    <img src="./src/assets/icons/done.png" width="25rem" alt="medal">
+                                    <img src="@/assets/icons/done.png" width="25rem" alt="medal">
                                 </div>
                                 <div class="info-statistic-box">
                                     <div class="statistic-box__value">135</div>
@@ -45,13 +45,13 @@
                         <ul class="list-awards">
                             <li class="list-awards__item">
                                 <div class="list-awards__icon">
-                                    <img src="./src/assets/icons/award1.png" height="100rem" alt="Award1">
+                                    <img src="@/assets/icons/award1.png" height="100rem" alt="Award1">
                                 </div>
                                 <div class="list-awards__title">AWARD 1</div>
                             </li>
                             <li class="list-awards__item">
                                 <div class="list-awards__icon">
-                                    <img src="./src/assets/icons/award2.png" height="100rem" alt="Award2">
+                                    <img src="@/assets/icons/award2.png" height="100rem" alt="Award2">
                                 </div>
                                 <div class="list-awards__title">AWARD 2</div>
                             </li>
