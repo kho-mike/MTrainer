@@ -26,7 +26,7 @@
                             />
                         </div>
                     </div>
-                    <div class="userBar-btn-title btn--medium">UserName</div>
+                    <div class="userBar-btn-title btn--medium">{{userStore.user.name}}</div>
                 </div>
                 <div class="userBar-menu header-item">
                     <ButtonNav  @click="logout" class="btn-nav-back" label="Выход"/>
