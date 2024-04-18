@@ -73,7 +73,9 @@ const passRepeat = ref("");
 const isPassMatch = computed(() => !login.value || !pass.value || pass.value !== passRepeat.value);
 
 function onSubmit(form) {
-    console.log(userStore.reg(login.value, pass.value));
+    const result = userStore.reg(login.value, pass.value);
+    console.log('result:');
+    console.log(result); 
 }  
 
 
