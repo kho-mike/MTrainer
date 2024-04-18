@@ -5,6 +5,7 @@ import Login                              from '@/components/pages/Login.vue';
 import Reg                                from '@/components/pages/Reg.vue';
 import Settings                           from '@/components/pages/Settings.vue';
 import Modes                              from '@/components/pages/Modes.vue';
+import Mode                               from '@/components/pages/Mode.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
