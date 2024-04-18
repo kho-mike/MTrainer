@@ -1,7 +1,7 @@
 import { ref, computed, watch } from "vue";
 import { defineStore } from "pinia";
 import { useConfigStore } from "./useConfigStore";
-import { router } from "@/router";
+import router from "@/router";
 
 export const useUserStore = defineStore("userStore", () => {
     const user = ref(JSON.parse(localStorage.getItem("user")));
