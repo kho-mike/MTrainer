@@ -14,6 +14,7 @@
         <div v-if="userStore.user" class="header-center">
             <RouterLink to="/modes"><Button class="btn--medium" label="Режимы"/></RouterLink>
             <RouterLink to="/mode"><Button class="btn--medium" label="Режим"/></RouterLink>
+            <RouterLink to="/new"><Button class="btn--medium" label="New"/></RouterLink>
         </div>
         <div class="header-end">
             <div v-if="userStore.user" class="userBar">
