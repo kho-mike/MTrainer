@@ -175,6 +175,9 @@ import Msg          from "@/components/elements/Msg.vue";
 import { Answers, Exercises, Operators } from "@/MTrainer";
 import { reactive, ref } from "vue";
 
+import { useMTrainerStore } from "@/stores";
+const MTrainerStore = useMTrainerStore();
+
 const currentTask = reactive({
     firstOperand: 2,
     operator: Operators.multiplication.icon,
