@@ -25,7 +25,7 @@ export const useMTrainerStore = defineStore( 'MTrainer', () => {
         composition: "и",
     }
 
-    labels = {
+    const labels = {
         multiplication: "Умножение",
         division: "Деление",
         composition: "Состав числа",
@@ -378,5 +378,6 @@ export const useMTrainerStore = defineStore( 'MTrainer', () => {
     return { 
         signs, 
         examples, 
+        labels,
     };
 } )
