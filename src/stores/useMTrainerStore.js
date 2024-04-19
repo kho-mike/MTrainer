@@ -17,7 +17,7 @@ divisor - делитель;
 quotient - частное.
 */
 
-export const useUserStore = defineStore( 'userStore', () => {
+export const useMTrainerStore = defineStore( 'MTrainer', () => {
 
     const signs = {
         multiplication: "x",

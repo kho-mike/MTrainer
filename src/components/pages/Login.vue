@@ -31,7 +31,7 @@
                     <input
                         v-model="remember"
                         type="checkbox"
-                        class="inpit-checkbox"
+                        class="input-checkbox"
                         name="remember"
                         id="remember"
                     />
@@ -66,7 +66,7 @@ import Inp from "@/components/elements/Input.vue";
 import Msg from "@/components/elements/Msg.vue";
 import { reactive, ref } from "vue";
 
-import useUserStore from "@/stores/useUserStore.js";
+import { useUserStore } from "@/stores";
 const userStore = useUserStore();
 
 const login = ref("");
