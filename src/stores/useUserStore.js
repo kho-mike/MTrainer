@@ -3,7 +3,7 @@ import { defineStore } from "pinia";
 import { useConfigStore } from "./useConfigStore";
 import router from "@/router";
 
-export const useUserStore = defineStore("userStore", () => {
+export default useUserStore = defineStore("userStore", () => {
     const user = ref(JSON.parse(localStorage.getItem("user")));
 
     const login = async (login, pass) => {
