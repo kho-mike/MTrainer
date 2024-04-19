@@ -66,7 +66,7 @@ import Inp from "@/components/elements/Input.vue";
 import Msg from "@/components/elements/Msg.vue";
 import { reactive, ref } from "vue";
 
-import { useUserStore } from "@/stores";
+import useUserStore from "@/stores";
 const userStore = useUserStore();
 
 const login = ref("");
