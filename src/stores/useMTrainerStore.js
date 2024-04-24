@@ -31,7 +31,9 @@ quotient - частное.
 export const useMTrainerStore = defineStore( 'MTrainer', () => {
 
     const getExamples = function(operation, operand, count, level){
-        return [ operation, operand, count, level ];
+        //return [ operation, operand, count, level ];
+
+        return examples.filter( elem => elem.type == "division" );
     }
 
     const signs = {
