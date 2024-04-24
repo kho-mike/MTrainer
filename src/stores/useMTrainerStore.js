@@ -18,22 +18,28 @@ quotient - частное.
 */
 
 
-
-
-/**
- * Функции:
- * 
- * 1. Сформировать массив примеров по заданным параметрам:
- *   - оператор
- *   - сложность примеров 
- */
-
 export const useMTrainerStore = defineStore( 'MTrainer', () => {
 
-    const getExamples = function(operation, operand, count, level){
+    const getExamples = function(operation = null, operand = null, count = 20, level = null){
         //return [ operation, operand, count, level ];
+        let result = examples;
 
-        return examples.filter( elem => elem.type === "multiplication" && elem.first === 2 );
+        if (level){
+            result = result.filter( elem => elem.level <= level );
+        }
+
+        if (operation){
+            result = result.filter( elem => elem.type === operation );
+        }
+
+        if (operand){
+            result = result.filter( elem => elem.first === operand );
+        }
+
+
+        
+
+        return result;
     }
 
     const signs = {
