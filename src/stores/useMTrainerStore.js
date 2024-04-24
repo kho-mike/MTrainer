@@ -799,5 +799,6 @@ export const useMTrainerStore = defineStore( 'MTrainer', () => {
         signs, 
         examples, 
         labels,
+        getExamples,
     };
 } )
