@@ -178,6 +178,8 @@ import { reactive, ref } from "vue";
 import { useMTrainerStore } from "@/stores";
 const MTrainerStore = useMTrainerStore();
 
+console.log( MTrainerStore.getExamples( 'operation', 'operand', 'count', 'level' ) );
+
 const currentTask = reactive({
     firstOperand: 2,
     operator: Operators.multiplication.icon,
