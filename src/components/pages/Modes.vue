@@ -7,6 +7,10 @@
                 
                 <div class="content-other__wrapper">
                     <div class="list-categories-box">
+                        <div>
+                            List of lists
+                        </div>
+                        <hr>
                         <ul class="list-categories">
                             <li class="list-categories__item--medium">
                                 <a href="#">
