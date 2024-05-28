@@ -9,7 +9,7 @@
                     <div class="list-categories-box">
                         <div>
                             List of lists
-                            <div v-for="item in Orerators" >List of Operators{{ item }}</div>
+                            <div v-for="(value, key) in Operators" >List of Operators {{ key }}: {{ value }}</div>
                         </div>
                         <hr>
                         <ul class="list-categories">
@@ -66,6 +66,9 @@
 
 
 <script setup>
+
+import { Answers, Exercises, Operators } from "@/MTrainer";
+
 
 </script>
 
