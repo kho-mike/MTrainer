@@ -9,6 +9,7 @@
                     <div class="list-categories-box">
                         <div>
                             List of lists
+                            <div v-for="item in Orerators" >{{ item }}</div>
                         </div>
                         <hr>
                         <ul class="list-categories">
